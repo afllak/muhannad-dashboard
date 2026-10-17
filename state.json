@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "last_checked": "2026-10-17T21:40:45Z",
+  "last_checked": "2026-10-17T21:49:17Z",
   "provenance": "N8N_MATERIALIZED_REGISTRY_CHECKPOINT",
   "integration": "N8N_DURABLE_GITHUB",
-  "checkpoint": 382,
-  "source_revision": "77f80a8367d57a12ba56aa1e662f68b24a688df721569ded0ef49d7eb0ee19b4",
+  "checkpoint": 396,
+  "source_revision": "2d65e4e11d0186eb8e51ee78e6a3a278e21d3732842bf42766388460d399876c",
   "observation_semantics": "LAST_KNOWN_REGISTRY_NOT_LIVE_WORKER_PROOF",
   "source_time_basis": "REGISTRY_FILE_MTIME_NOT_LANE_EVENT_TIME",
   "runtime_stale_after_seconds": 900,
@@ -14,7 +14,7 @@
       "title": "HOME Windows Lead",
       "connection": "UNKNOWN",
       "agent_heartbeat_at": null,
-      "runtime_heartbeat_at": "2026-10-17T21:45:00Z"
+      "runtime_heartbeat_at": "2026-10-17T21:50:00Z"
     },
     {
       "id": "pi",
@@ -63,7 +63,7 @@
       "id": "fantasy-roam-world",
       "title": "FantasyRoam",
       "title_ar": "الخريطة القديمة مرفوضة وفحص الأصول المحدود نجح",
-      "status": "BLOCKED",
+      "status": "ACTIVE",
       "milestone": "الخريطة القديمة مرفوضة من مهند. قبلها نجح التجميع والربط الفعلي للمحرّر؛ وفحص الأصول الأصلي المحدود نجح بدون حزم مصدر متّسخة. ماكو مشهد بديل جديد أو إثبات بصري أو أداء؛ حادث مسار البناء محفوظ وبمراجعة Lead قبل الخطوة الأصلية الجاية.",
       "milestone_basis": "REVIEWED_CHECKPOINT",
       "blocker": "مراجعة مسار البناء الآمن؛ المشهد البديل والقبول البصري بعدهم غير جاهزين",
