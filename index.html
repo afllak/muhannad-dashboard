@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark"><meta name="description" content="Read-only sanitized last-known workstream dashboard. No live-control access.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Muhannad / لوحة المتابعة</title>
+<link rel="stylesheet" href="styles.css"><script src="app.js" defer></script><script src="ui.js" defer></script>
+</head>
+<body>
+<div class="shell">
+<header class="topbar"><a class="wordmark" href="./" aria-label="الصفحة الرئيسية"><span class="mark" aria-hidden="true">M.</span><span>Muhannad <small>WORKSTREAM MONITOR</small></span></a><span class="read-only">للقراءة فقط <bdi> / READ ONLY</bdi></span></header>
+<main>
+<section class="intro" aria-labelledby="title"><div><p class="overline">HOME OPERATIONS / سجلّ المتابعة</p><h1 id="title">الصورة واضحة.<br><span>وآخر حالة محفوظة.</span></h1><p class="lede">الأعمال، بوابات الاختبار، وآخر ما نعرفه — بدون افتراض أنّ الأجهزة أو الوكلاء متصلون الآن.</p></div><div class="checkpoint"><span id="freshness">CHECKPOINT / UNKNOWN</span><time id="checked" dir="ltr">UNKNOWN</time><p>وقت مراجعة السجلّ، مو نبض مباشر.</p></div></section>
+<p id="error" class="error" role="status" hidden></p>
+<div class="workspace">
+<aside aria-labelledby="machines-title"><div class="section-head"><h2 id="machines-title">الأجهزة والاتصال</h2><span>CONNECTION</span></div><div id="nodes"></div><section class="agent-note"><h3>الـLead والعمّال</h3><p>نبض مباشر: <bdi>UNKNOWN</bdi></p><p>تصنيف العمل محفوظ من آخر مراجعة. لا يثبت أن أي عامل شغّال هسه.</p></section></aside>
+<section class="streams" aria-labelledby="streams-title"><div class="section-head"><h2 id="streams-title">مسارات العمل</h2><span>LAST-KNOWN STATE</span></div><p class="section-note">الحالة حسب آخر مراجعة للسجلّ. تفاصيل الإنجاز أدناه هي لقطة الأساس، وليست تحديثاً آلياً للنتائج.</p><div id="lanes"><p>تحميل آخر حالة…</p></div><details class="archive"><summary>الاختبارات السابقة والخطط المغلقة <span>HISTORY &amp; SUPERSEDED</span></summary><div id="history"></div></details></section>
+</div>
+<section class="boundary"><strong>حدود هذا العرض</strong><p>نشر مستقل إلى الـGitHub فقط. لم يُثبت قبول المسار الكامل <bdi>Hermes → n8n → GitHub</bdi>. لا أوامر، لا وصول إداري، ولا بيانات اعتماد. إذا توقف التحديث تبقى آخر حالة ظاهرة ويُعرض قِدمها.</p></section>
+</main>
+<footer><span>Muhannad / Public status projection</span><span>Static. Read-only. No live-control plane.</span></footer>
+</div>
+</body></html>

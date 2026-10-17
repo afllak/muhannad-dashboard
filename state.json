@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "last_checked": "2026-10-17T02:47:58Z",
+  "provenance": "SANITIZED_REGISTRY_CHECKPOINT",
+  "integration": "STANDALONE_GITHUB_ONLY",
+  "nodes": [
+    {
+      "id": "home-windows",
+      "title": "HOME Windows Lead",
+      "connection": "UNKNOWN",
+      "agent_heartbeat_at": null,
+      "runtime_heartbeat_at": null
+    },
+    {
+      "id": "pi",
+      "title": "Raspberry Pi",
+      "connection": "NOT_CONNECTED",
+      "agent_heartbeat_at": null,
+      "runtime_heartbeat_at": null
+    }
+  ],
+  "agents": [
+    {
+      "role": "Lead",
+      "heartbeat_at": null
+    },
+    {
+      "role": "Workers",
+      "heartbeat_at": null
+    }
+  ],
+  "lanes": [
+    {
+      "id": "drop1-human-loop",
+      "title": "Drop1 · scoped playtest",
+      "title_ar": "آخر اختبار بشري معروف",
+      "status": "DONE",
+      "milestone": "Scoped controller, resource and normal-exit loop verified; not general release acceptance.",
+      "milestone_basis": "FOUNDATION_CHECKPOINT",
+      "blocker": null,
+      "outcome": "SCOPED_VERIFIED",
+      "branch": null
+    },
+    {
+      "id": "drop1-ui-readability",
+      "title": "Drop1 · readability",
+      "title_ar": "اختبار وضوح القوائم",
+      "status": "WAITING_FOR_MUHANNAD",
+      "milestone": "Human-readability session prepared; visual acceptance pending.",
+      "milestone_basis": "FOUNDATION_CHECKPOINT",
+      "blocker": "Owner readiness for a short human test",
+      "outcome": "NOT_ACCEPTED",
+      "branch": null
+    },
+    {
+      "id": "truenas-backup-audit",
+      "title": "NAS maintenance",
+      "title_ar": "صيانة مستقلة مؤجّلة",
+      "status": "BLOCKED",
+      "milestone": "Maintenance parked; findings retained. No job execution or repair.",
+      "milestone_basis": "FOUNDATION_CHECKPOINT",
+      "blocker": "Parked by owner priority",
+      "outcome": "PARKED",
+      "branch": null
+    },
+    {
+      "id": "fantasy-roam-world",
+      "title": "FantasyRoam",
+      "title_ar": "تصحيح المصدر وتجميع أول نسخة",
+      "status": "ACTIVE",
+      "milestone": "First compile failed; focused source correction and rebuild assigned.",
+      "milestone_basis": "FOUNDATION_CHECKPOINT",
+      "blocker": "Compile verification pending",
+      "outcome": "NOT_ACCEPTED",
+      "branch": null
+    },
+    {
+      "id": "nas-vm-provisioning",
+      "title": "NAS VM plan",
+      "title_ar": "خطة سابقة مغلقة",
+      "status": "DONE",
+      "milestone": "Closed as superseded by Windows; no VM deployed.",
+      "milestone_basis": "FOUNDATION_CHECKPOINT",
+      "blocker": null,
+      "outcome": "SUPERSEDED",
+      "branch": null
+    },
+    {
+      "id": "hermes-update-ui",
+      "title": "Desktop UI plan",
+      "title_ar": "خطة سابقة مغلقة",
+      "status": "DONE",
+      "milestone": "Closed as superseded by the website; not implemented.",
+      "milestone_basis": "FOUNDATION_CHECKPOINT",
+      "blocker": null,
+      "outcome": "SUPERSEDED",
+      "branch": null
+    },
+    {
+      "id": "n8n-windows-website",
+      "title": "Windows automation",
+      "title_ar": "أساس الحالة والموقع",
+      "status": "ACTIVE",
+      "milestone": "Local send-event, persistence, restart and dedup path verified separately. Real-workstream ingestion not connected to this public site.",
+      "milestone_basis": "FOUNDATION_CHECKPOINT",
+      "blocker": "GitHub real-workstream end-to-end integration pending",
+      "outcome": "NOT_ACCEPTED",
+      "branch": null
+    },
+    {
+      "id": "fantasy-runtime-review",
+      "title": "Runtime review",
+      "title_ar": "مراجعة المصدر",
+      "status": "DONE",
+      "milestone": "Review complete with cleanup and regression-coverage findings; not a native PASS.",
+      "milestone_basis": "FOUNDATION_CHECKPOINT",
+      "blocker": null,
+      "outcome": "FINDINGS_RETAINED",
+      "branch": null
+    }
+  ]
+}
