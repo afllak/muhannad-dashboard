@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "last_checked": "2026-10-17T23:10:52Z",
+  "last_checked": "2026-10-17T23:21:55Z",
   "provenance": "N8N_MATERIALIZED_REGISTRY_CHECKPOINT",
   "integration": "N8N_DURABLE_GITHUB",
-  "checkpoint": 586,
-  "source_revision": "f7d001db15bd63377dd7ef1701727364867c7db29368159ec3040a96b04322cb",
+  "checkpoint": 601,
+  "source_revision": "0ec773a97f740f5193e3e24a470a337d7fff27b36249b317b78c57fb230e739f",
   "observation_semantics": "LAST_KNOWN_REGISTRY_NOT_LIVE_WORKER_PROOF",
   "source_time_basis": "REGISTRY_FILE_MTIME_NOT_LANE_EVENT_TIME",
   "runtime_stale_after_seconds": 900,
@@ -17,8 +17,8 @@
       "runtime_heartbeat_at": "2026-10-17T23:20:00Z",
       "lead_observation": {
         "observed_state": "ACTIVE_TURN_OBSERVED",
-        "observed_at": "2026-10-17T23:10:36.097938+00:00",
-        "expires_at": "2026-10-17T23:15:36.097938+00:00",
+        "observed_at": "2026-10-17T23:21:48.994615+00:00",
+        "expires_at": "2026-10-17T23:26:48.994615+00:00",
         "stale_after_seconds": 300,
         "basis": "HERMES_NATIVE_LEAD_TURN"
       }
