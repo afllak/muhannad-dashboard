@@ -159,12 +159,12 @@
     {
       "id": "n8n-windows-website",
       "title": "Windows automation",
-      "title_ar": "النشر التلقائي متحقق؛ قراءة ChatGPT غير متحققة",
+      "title_ar": "المرحلة الأولى متحققة؛ قراءة ChatGPT مؤكدة",
       "status": "WAITING_FOR_MUHANNAD",
-      "milestone": "تحقق نشر السجل تلقائياً عبر n8n والحفظ المحلي إلى الحالة الخاصة والبيانات العامة، مع تطابق الملفات المنشورة ومنع التكرار. رصد دور Lead والعمال منفصل عن نبض الخدمة وينتهي بصلاحيته. قراءة ChatGPT الحقيقية ورجوع مراجعته بعدهن غير متحققتين؛ ماكو أتمتة متصفح.",
+      "milestone": "مهند أكد أن ChatGPT قرأ الحالة مباشرة من المستودع الخاص عند checkpoint 571 بدون نسخ يدوي. مسار Hermes إلى n8n إلى GitHub الخاص إلى القارئ متحقق، والنشر التلقائي مستمر. رجوع المراجعات مرحلة مستقلة قيد التنفيذ المحدود؛ ماكو أتمتة متصفح أو صلاحية أوامر تلقائية.",
       "milestone_basis": "REVIEWED_CHECKPOINT",
-      "blocker": "المطلوب المتبقي هو إثبات قراءة الحساب المسموح بها؛ مو إصلاح خدمة Windows أو إعادة تشغيلها",
-      "outcome": "PUBLICATION_RECOVERY_READER_UNVERIFIED",
+      "blocker": null,
+      "outcome": "FORWARD_READER_VERIFIED",
       "branch": null,
       "completion_scope": "NOT_COMPLETE",
       "worker_observation": {
