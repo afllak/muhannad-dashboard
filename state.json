@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "last_checked": "2026-10-17T03:56:55Z",
+  "last_checked": "2026-10-17T04:05:05Z",
   "provenance": "N8N_MATERIALIZED_REGISTRY_CHECKPOINT",
   "integration": "N8N_DURABLE_GITHUB",
-  "checkpoint": 228,
-  "source_revision": "76666e57acbdc55b97c6595a2cdf32009ed48e4b45ef4e3651b2425bfc3ca8fc",
+  "checkpoint": 242,
+  "source_revision": "b8f80870fc546aec4542671c1498d1c7e48978f4addd5e5d7097075d520040f3",
   "observation_semantics": "LAST_KNOWN_REGISTRY_NOT_LIVE_WORKER_PROOF",
   "source_time_basis": "REGISTRY_FILE_MTIME_NOT_LANE_EVENT_TIME",
   "runtime_stale_after_seconds": 900,
@@ -14,7 +14,7 @@
       "title": "HOME Windows Lead",
       "connection": "UNKNOWN",
       "agent_heartbeat_at": null,
-      "runtime_heartbeat_at": "2026-10-17T04:00:00Z"
+      "runtime_heartbeat_at": "2026-10-17T04:05:00Z"
     },
     {
       "id": "pi",
@@ -51,7 +51,7 @@
       "id": "drop1-ui-readability",
       "title": "Drop1 · readability",
       "title_ar": "تصحيح الواجهة بعد التجربة",
-      "status": "BLOCKED",
+      "status": "ACTIVE",
       "milestone": "تجربة الـBuild10 انتهت: حجم القوائم وتحديد الـPause واضحين، بس الواجهة مو مقبولة بعد. دا نصلّح تلميحات اللعب والمساعدة والتداخلات والحروف، بدون تغيير ميكانيك اللعب.",
       "milestone_basis": "REVIEWED_CHECKPOINT",
       "blocker": null,
@@ -63,7 +63,7 @@
       "id": "fantasy-roam-world",
       "title": "FantasyRoam",
       "title_ar": "الخريطة محفوظة وفحصها الهندسي نجح",
-      "status": "ACTIVE",
+      "status": "WAITING_FOR_MUHANNAD",
       "milestone": "تصلّح كود التشغيل، ونجح التجميع والربط الفعلي للمحرّر. الخريطة تألّفت وانحفظت وأُعيد تحميلها، ونجح فحصها الهندسي المحدود. الشكل واللعب بعدهم مو مقبولين بشرياً.",
       "milestone_basis": "REVIEWED_CHECKPOINT",
       "blocker": "باقي فحص الشكل واللعب؛ نجاح الفحص الهندسي مو قبول بصري",
