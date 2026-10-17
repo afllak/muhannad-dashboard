@@ -50,11 +50,11 @@
     {
       "id": "drop1-ui-readability",
       "title": "Drop1 · readability",
-      "title_ar": "اختبار وضوح القوائم",
+      "title_ar": "تصحيح الواجهة بعد التجربة",
       "status": "ACTIVE",
-      "milestone": "جلسة اختبار وضوح القوائم جاهزة؛ القبول البصري بعده معلّق.",
+      "milestone": "تجربة الـBuild10 انتهت: حجم القوائم وتحديد الـPause واضحين، بس الواجهة مو مقبولة بعد. دا نصلّح تلميحات اللعب والمساعدة والتداخلات والحروف، بدون تغيير ميكانيك اللعب.",
       "milestone_basis": "REVIEWED_CHECKPOINT",
-      "blocker": "بانتظار مهند حتى نبدأ اختبار قصير",
+      "blocker": null,
       "outcome": "NOT_ACCEPTED",
       "branch": null,
       "completion_scope": "NOT_COMPLETE"
@@ -62,11 +62,11 @@
     {
       "id": "fantasy-roam-world",
       "title": "FantasyRoam",
-      "title_ar": "نجاح بناء المحرّر والعمل على المشهد",
+      "title_ar": "الخريطة محفوظة وفحصها الهندسي نجح",
       "status": "ACTIVE",
-      "milestone": "تصلّح كود التشغيل، ونجح التجميع والربط الفعلي للمحرّر. شغل المشهد داخل المحرّك مأذون وقيد التنفيذ حسب آخر مراجعة؛ نجاح البناء مو إثبات لسلوك اللعبة أو قبول المشهد.",
+      "milestone": "تصلّح كود التشغيل، ونجح التجميع والربط الفعلي للمحرّر. الخريطة تألّفت وانحفظت وأُعيد تحميلها، ونجح فحصها الهندسي المحدود. الشكل واللعب بعدهم مو مقبولين بشرياً.",
       "milestone_basis": "REVIEWED_CHECKPOINT",
-      "blocker": "المشهد والسلوك داخل اللعبة بعدهم بانتظار التحقق",
+      "blocker": "باقي فحص الشكل واللعب؛ نجاح الفحص الهندسي مو قبول بصري",
       "outcome": "NOT_ACCEPTED",
       "branch": null,
       "completion_scope": "NOT_COMPLETE"
@@ -74,12 +74,12 @@
     {
       "id": "fantasy-runtime-review",
       "title": "Runtime review",
-      "title_ar": "مراجعة المصدر",
+      "title_ar": "مراجعة الكود والفحص التقني اكتملت",
       "status": "DONE",
-      "milestone": "المراجعة السابقة سجّلت ملاحظات تنظيف وتغطية اختبارات. بعدها تصلّح المصدر ونجح البناء؛ مراجعة التعديلات بعده معلّقة، وسلوك اللعبة داخل المحرّك مو مثبت.",
+      "milestone": "مراجعة تصحيح التشغيل وأداة تأليف الخريطة اكتملت بدون عائق تقني مانع. القبول محصور بالكود والفحص المحفوظ؛ مو إثبات للشكل أو اللعب.",
       "milestone_basis": "REVIEWED_CHECKPOINT",
-      "blocker": "بانتظار مراجعة التعديلات واختبار سلوك اللعبة",
-      "outcome": "FINDINGS_RETAINED",
+      "blocker": null,
+      "outcome": "SCOPED_VERIFIED",
       "branch": null,
       "completion_scope": "ASSIGNMENT_CLOSED_NOT_IMPLEMENTATION_PASS"
     },
