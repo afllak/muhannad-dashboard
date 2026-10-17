@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "last_checked": "2026-10-17T22:38:52Z",
+  "last_checked": "2026-10-17T22:45:21Z",
   "provenance": "N8N_MATERIALIZED_REGISTRY_CHECKPOINT",
   "integration": "N8N_DURABLE_GITHUB",
-  "checkpoint": 526,
-  "source_revision": "8a00bd7568c170cf75c6d4c1ba41497490ad5feacd2a16ef024842c75ff895ad",
+  "checkpoint": 541,
+  "source_revision": "4e243dae6c4ef6988f4a9a57975e06387d29f18d7f6210ea70500a1da2dcc404",
   "observation_semantics": "LAST_KNOWN_REGISTRY_NOT_LIVE_WORKER_PROOF",
   "source_time_basis": "REGISTRY_FILE_MTIME_NOT_LANE_EVENT_TIME",
   "runtime_stale_after_seconds": 900,
@@ -14,11 +14,11 @@
       "title": "HOME Windows Lead",
       "connection": "UNKNOWN",
       "agent_heartbeat_at": null,
-      "runtime_heartbeat_at": "2026-10-17T22:40:00Z",
+      "runtime_heartbeat_at": "2026-10-17T22:45:00Z",
       "lead_observation": {
         "observed_state": "ACTIVE_TURN_OBSERVED",
-        "observed_at": "2026-10-17T22:38:44.115339+00:00",
-        "expires_at": "2026-10-17T22:43:44.115339+00:00",
+        "observed_at": "2026-10-17T22:45:12.074213+00:00",
+        "expires_at": "2026-10-17T22:50:12.074213+00:00",
         "stale_after_seconds": 300,
         "basis": "HERMES_NATIVE_LEAD_TURN"
       }
@@ -160,7 +160,7 @@
       "id": "n8n-windows-website",
       "title": "Windows automation",
       "title_ar": "النشر التلقائي متحقق؛ قراءة ChatGPT غير متحققة",
-      "status": "ACTIVE",
+      "status": "WAITING_FOR_MUHANNAD",
       "milestone": "تحقق نشر السجل تلقائياً عبر n8n والحفظ المحلي إلى الحالة الخاصة والبيانات العامة، مع تطابق الملفات المنشورة ومنع التكرار. رصد دور Lead والعمال منفصل عن نبض الخدمة وينتهي بصلاحيته. قراءة ChatGPT الحقيقية ورجوع مراجعته بعدهن غير متحققتين؛ ماكو أتمتة متصفح.",
       "milestone_basis": "REVIEWED_CHECKPOINT",
       "blocker": "المطلوب المتبقي هو إثبات قراءة الحساب المسموح بها؛ مو إصلاح خدمة Windows أو إعادة تشغيلها",
@@ -169,8 +169,8 @@
       "completion_scope": "NOT_COMPLETE",
       "worker_observation": {
         "observed_state": "NO_ACTIVE_DELEGATE_OBSERVED",
-        "observed_at": "2026-10-17T22:38:44.115339+00:00",
-        "expires_at": "2026-10-17T22:43:44.115339+00:00",
+        "observed_at": "2026-10-17T22:45:12.074213+00:00",
+        "expires_at": "2026-10-17T22:50:12.074213+00:00",
         "stale_after_seconds": 300,
         "basis": "HERMES_NATIVE_DELEGATE_LIST"
       }
