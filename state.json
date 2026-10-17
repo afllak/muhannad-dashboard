@@ -1,15 +1,20 @@
 {
   "schema_version": 1,
-  "last_checked": "2026-10-17T02:56:29Z",
-  "provenance": "SANITIZED_REGISTRY_CHECKPOINT",
-  "integration": "STANDALONE_GITHUB_ONLY",
+  "last_checked": "2026-10-17T03:14:39Z",
+  "provenance": "N8N_MATERIALIZED_REGISTRY_CHECKPOINT",
+  "integration": "N8N_DURABLE_GITHUB",
+  "checkpoint": 88,
+  "source_revision": "6963f14c9cd150d41374e169acde22aba3a3d1339a2bc149e4c33f1e31fcc0ef",
+  "observation_semantics": "LAST_KNOWN_REGISTRY_NOT_LIVE_WORKER_PROOF",
+  "source_time_basis": "REGISTRY_FILE_MTIME_NOT_LANE_EVENT_TIME",
+  "runtime_stale_after_seconds": 900,
   "nodes": [
     {
       "id": "home-windows",
       "title": "HOME Windows Lead",
       "connection": "UNKNOWN",
       "agent_heartbeat_at": null,
-      "runtime_heartbeat_at": null
+      "runtime_heartbeat_at": "2026-10-17T03:15:00Z"
     },
     {
       "id": "pi",
@@ -39,7 +44,8 @@
       "milestone_basis": "REVIEWED_CHECKPOINT",
       "blocker": null,
       "outcome": "SCOPED_VERIFIED",
-      "branch": null
+      "branch": null,
+      "completion_scope": "ASSIGNMENT_CLOSED_NOT_IMPLEMENTATION_PASS"
     },
     {
       "id": "drop1-ui-readability",
@@ -50,62 +56,20 @@
       "milestone_basis": "REVIEWED_CHECKPOINT",
       "blocker": "بانتظار مهند حتى نبدأ اختبار قصير",
       "outcome": "NOT_ACCEPTED",
-      "branch": null
-    },
-    {
-      "id": "truenas-backup-audit",
-      "title": "NAS maintenance",
-      "title_ar": "صيانة مستقلة مؤجّلة",
-      "status": "BLOCKED",
-      "milestone": "الصيانة مؤجّلة والملاحظات محفوظة؛ ما تنفّذت مهام أو إصلاحات.",
-      "milestone_basis": "REVIEWED_CHECKPOINT",
-      "blocker": "مؤجّل حسب أولوية مهند",
-      "outcome": "PARKED",
-      "branch": null
+      "branch": null,
+      "completion_scope": "NOT_COMPLETE"
     },
     {
       "id": "fantasy-roam-world",
       "title": "FantasyRoam",
-      "title_ar": "تصحيح المصدر ونجاح بناء المحرّر",
+      "title_ar": "نجاح بناء المحرّر والعمل على المشهد",
       "status": "ACTIVE",
-      "milestone": "تصلّح كود التشغيل، ونجح التجميع والربط الفعلي للمحرّر. المشهد والشكل داخل المحرّك بعدهم ما انعملوا؛ نجاح البناء مو إثبات لسلوك اللعبة.",
+      "milestone": "تصلّح كود التشغيل، ونجح التجميع والربط الفعلي للمحرّر. شغل المشهد داخل المحرّك مأذون وقيد التنفيذ حسب آخر مراجعة؛ نجاح البناء مو إثبات لسلوك اللعبة أو قبول المشهد.",
       "milestone_basis": "REVIEWED_CHECKPOINT",
-      "blocker": "بانتظار مراجعة التعديلات والإذن بشغل المشهد",
+      "blocker": "المشهد والسلوك داخل اللعبة بعدهم بانتظار التحقق",
       "outcome": "NOT_ACCEPTED",
-      "branch": null
-    },
-    {
-      "id": "nas-vm-provisioning",
-      "title": "NAS VM plan",
-      "title_ar": "خطة سابقة مغلقة",
-      "status": "DONE",
-      "milestone": "الخطة انغلقت لأن Windows صار البديل؛ ما تنصّبت آلة افتراضية.",
-      "milestone_basis": "REVIEWED_CHECKPOINT",
-      "blocker": null,
-      "outcome": "SUPERSEDED",
-      "branch": null
-    },
-    {
-      "id": "hermes-update-ui",
-      "title": "Desktop UI plan",
-      "title_ar": "خطة سابقة مغلقة",
-      "status": "DONE",
-      "milestone": "الخطة انغلقت لأن الموقع صار بديل إلها؛ ما تنفّذت.",
-      "milestone_basis": "REVIEWED_CHECKPOINT",
-      "blocker": null,
-      "outcome": "SUPERSEDED",
-      "branch": null
-    },
-    {
-      "id": "n8n-windows-website",
-      "title": "Windows automation",
-      "title_ar": "نجاح المسار المحلي ونشر الموقع",
-      "status": "ACTIVE",
-      "milestone": "نجح مسار n8n المحلي بحدث تجريبي، مع حفظ الحالة وإعادة التشغيل ومنع التكرار. الموقع منشور للقراءة فقط؛ ربط حالة العمل الحقيقية والنشر الآلي بعده مو مقبول.",
-      "milestone_basis": "REVIEWED_CHECKPOINT",
-      "blocker": "بانتظار قبول ربط الحالة الحقيقية والنشر الآلي من البداية للنهاية",
-      "outcome": "NOT_ACCEPTED",
-      "branch": null
+      "branch": null,
+      "completion_scope": "NOT_COMPLETE"
     },
     {
       "id": "fantasy-runtime-review",
@@ -116,7 +80,56 @@
       "milestone_basis": "REVIEWED_CHECKPOINT",
       "blocker": "بانتظار مراجعة التعديلات واختبار سلوك اللعبة",
       "outcome": "FINDINGS_RETAINED",
-      "branch": null
+      "branch": null,
+      "completion_scope": "ASSIGNMENT_CLOSED_NOT_IMPLEMENTATION_PASS"
+    },
+    {
+      "id": "hermes-update-ui",
+      "title": "Desktop UI plan",
+      "title_ar": "خطة سابقة مغلقة",
+      "status": "IDLE",
+      "milestone": "الخطة انغلقت لأن الموقع صار بديل إلها؛ ما تنفّذت.",
+      "milestone_basis": "REVIEWED_CHECKPOINT",
+      "blocker": null,
+      "outcome": "SUPERSEDED",
+      "branch": null,
+      "completion_scope": "CLOSED_SUPERSEDED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "n8n-windows-website",
+      "title": "Windows automation",
+      "title_ar": "نجاح المسار المحلي ونشر الموقع",
+      "status": "ACTIVE",
+      "milestone": "نجح مسار n8n المحلي بحدث تجريبي، مع حفظ الحالة وإعادة التشغيل ومنع التكرار. الموقع منشور للقراءة فقط؛ ربط حالة العمل الحقيقية والنشر الآلي بعده مو مقبول.",
+      "milestone_basis": "REVIEWED_CHECKPOINT",
+      "blocker": "بانتظار قبول ربط الحالة الحقيقية والنشر الآلي من البداية للنهاية",
+      "outcome": "NOT_ACCEPTED",
+      "branch": null,
+      "completion_scope": "NOT_COMPLETE"
+    },
+    {
+      "id": "nas-vm-provisioning",
+      "title": "NAS VM plan",
+      "title_ar": "خطة سابقة مغلقة",
+      "status": "IDLE",
+      "milestone": "الخطة انغلقت لأن Windows صار البديل؛ ما تنصّبت آلة افتراضية.",
+      "milestone_basis": "REVIEWED_CHECKPOINT",
+      "blocker": null,
+      "outcome": "SUPERSEDED",
+      "branch": null,
+      "completion_scope": "CLOSED_SUPERSEDED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "truenas-backup-audit",
+      "title": "NAS maintenance",
+      "title_ar": "صيانة مستقلة مؤجّلة",
+      "status": "BLOCKED",
+      "milestone": "الصيانة مؤجّلة والملاحظات محفوظة؛ ما تنفّذت مهام أو إصلاحات.",
+      "milestone_basis": "REVIEWED_CHECKPOINT",
+      "blocker": "مؤجّل حسب أولوية مهند",
+      "outcome": "PARKED",
+      "branch": null,
+      "completion_scope": "NOT_COMPLETE"
     }
   ]
 }
