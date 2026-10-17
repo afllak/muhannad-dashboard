@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "last_checked": "2026-10-17T22:45:21Z",
+  "last_checked": "2026-10-17T22:49:51Z",
   "provenance": "N8N_MATERIALIZED_REGISTRY_CHECKPOINT",
   "integration": "N8N_DURABLE_GITHUB",
-  "checkpoint": 541,
-  "source_revision": "4e243dae6c4ef6988f4a9a57975e06387d29f18d7f6210ea70500a1da2dcc404",
+  "checkpoint": 556,
+  "source_revision": "6ed8bd01cfe5383d11d7192645cf004b7073806628259e7ce94519e95d30a74c",
   "observation_semantics": "LAST_KNOWN_REGISTRY_NOT_LIVE_WORKER_PROOF",
   "source_time_basis": "REGISTRY_FILE_MTIME_NOT_LANE_EVENT_TIME",
   "runtime_stale_after_seconds": 900,
@@ -14,7 +14,7 @@
       "title": "HOME Windows Lead",
       "connection": "UNKNOWN",
       "agent_heartbeat_at": null,
-      "runtime_heartbeat_at": "2026-10-17T22:45:00Z",
+      "runtime_heartbeat_at": "2026-10-17T22:50:00Z",
       "lead_observation": {
         "observed_state": "ACTIVE_TURN_OBSERVED",
         "observed_at": "2026-10-17T22:45:12.074213+00:00",
@@ -46,7 +46,7 @@
       "id": "drop-1-1-fast-playtest",
       "title": "Drop1.1 · separate correction",
       "title_ar": "مراجعة مرشح مستقل؛ مو إعادة فتح Drop1",
-      "status": "ACTIVE",
+      "status": "BLOCKED",
       "milestone": "Drop1 الأساسي مقبول بعد Build11. المرشح التصحيحي المستقل بُني وانفحص ضمن نطاقه؛ المراجعة المستقلة وبوابة اختبار نقص المواد بعدهن مفتوحتين. هدف Area Foundation بعده مطلوب، وماكو قبول كامل للتحسين أو دعوة لعب.",
       "milestone_basis": "REVIEWED_CHECKPOINT",
       "blocker": "مراجعة المرشح وحسم اختبار نقص المواد؛ Area Foundation بعده الهدف الأساسي",
@@ -54,9 +54,9 @@
       "branch": null,
       "completion_scope": "NOT_COMPLETE",
       "worker_observation": {
-        "observed_state": "ACTIVE_DELEGATE_OBSERVED",
-        "observed_at": "2026-10-17T22:30:09.543212+00:00",
-        "expires_at": "2026-10-17T22:35:09.543212+00:00",
+        "observed_state": "NO_ACTIVE_DELEGATE_OBSERVED",
+        "observed_at": "2026-10-17T22:49:42.133932+00:00",
+        "expires_at": "2026-10-17T22:54:42.133932+00:00",
         "stale_after_seconds": 300,
         "basis": "HERMES_NATIVE_DELEGATE_LIST"
       }
@@ -103,7 +103,7 @@
       "id": "fantasy-roam-world",
       "title": "FantasyRoam",
       "title_ar": "مشهد صغير منفصل قيد التحضير والتحقق",
-      "status": "ACTIVE",
+      "status": "BLOCKED",
       "milestone": "الخريطة القديمة مرفوضة من مهند؛ فحص الأصول المحدود السابق محفوظ. شغل المرشح الجديد يشمل تحضير المصدر ثم فحص البناء والمشهد حسب بوابات السلامة. تصنيف العمل لا يعني نجاح البناء أو وجود صور مقبولة أو إثبات الأداء.",
       "milestone_basis": "REVIEWED_CHECKPOINT",
       "blocker": "نجاح الفحص الأصلي وقبول الصور يحتاجان أدلة منفصلة عن تصنيف العمل",
@@ -111,9 +111,9 @@
       "branch": null,
       "completion_scope": "NOT_COMPLETE",
       "worker_observation": {
-        "observed_state": "ACTIVE_DELEGATE_OBSERVED",
-        "observed_at": "2026-10-17T22:27:07.585640+00:00",
-        "expires_at": "2026-10-17T22:32:07.585640+00:00",
+        "observed_state": "NO_ACTIVE_DELEGATE_OBSERVED",
+        "observed_at": "2026-10-17T22:49:42.133932+00:00",
+        "expires_at": "2026-10-17T22:54:42.133932+00:00",
         "stale_after_seconds": 300,
         "basis": "HERMES_NATIVE_DELEGATE_LIST"
       }
