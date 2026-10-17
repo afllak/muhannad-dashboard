@@ -14,7 +14,7 @@
       "title": "HOME Windows Lead",
       "connection": "UNKNOWN",
       "agent_heartbeat_at": null,
-      "runtime_heartbeat_at": "2026-10-17T03:15:00Z"
+      "runtime_heartbeat_at": "2026-10-17T03:20:00Z"
     },
     {
       "id": "pi",
@@ -98,12 +98,12 @@
     {
       "id": "n8n-windows-website",
       "title": "Windows automation",
-      "title_ar": "نجاح المسار المحلي ونشر الموقع",
+      "title_ar": "نشر مجدول للحالة الحقيقية",
       "status": "ACTIVE",
-      "milestone": "نجح مسار n8n المحلي بحدث تجريبي، مع حفظ الحالة وإعادة التشغيل ومنع التكرار. الموقع منشور للقراءة فقط؛ ربط حالة العمل الحقيقية والنشر الآلي بعده مو مقبول.",
+      "milestone": "ثبت مرور الحالة الحقيقية من السجل عبر n8n والحفظ المحلي إلى GitHub بجدولة أصلية، مع منع التكرار. هذا تحقق محدّد للمسار؛ مو اختبار لإقلاع Windows أو نشاط الوكلاء.",
       "milestone_basis": "REVIEWED_CHECKPOINT",
-      "blocker": "بانتظار قبول ربط الحالة الحقيقية والنشر الآلي من البداية للنهاية",
-      "outcome": "NOT_ACCEPTED",
+      "blocker": "باقي التشغيل التلقائي واختبار إعادة تشغيل Windows",
+      "outcome": "SCOPED_VERIFIED",
       "branch": null,
       "completion_scope": "NOT_COMPLETE"
     },
