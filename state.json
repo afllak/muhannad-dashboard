@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "last_checked": "2026-10-17T04:26:36Z",
+  "last_checked": "2026-10-17T04:43:19Z",
   "provenance": "N8N_MATERIALIZED_REGISTRY_CHECKPOINT",
   "integration": "N8N_DURABLE_GITHUB",
-  "checkpoint": 270,
-  "source_revision": "f5dee37c6f63594123b329a0c947092a097e54149b78805e18ade3bef96da3d8",
+  "checkpoint": 312,
+  "source_revision": "cd702cb4091cf90f5efd148a957182f24c12875bea4a8b7597a71681d8159a3e",
   "observation_semantics": "LAST_KNOWN_REGISTRY_NOT_LIVE_WORKER_PROOF",
   "source_time_basis": "REGISTRY_FILE_MTIME_NOT_LANE_EVENT_TIME",
   "runtime_stale_after_seconds": 900,
@@ -14,7 +14,7 @@
       "title": "HOME Windows Lead",
       "connection": "UNKNOWN",
       "agent_heartbeat_at": null,
-      "runtime_heartbeat_at": "2026-10-17T04:30:00Z"
+      "runtime_heartbeat_at": "2026-10-17T04:45:00Z"
     },
     {
       "id": "pi",
@@ -50,11 +50,11 @@
     {
       "id": "drop1-ui-readability",
       "title": "Drop1 · readability",
-      "title_ar": "تصحيح الواجهة بعد التجربة",
-      "status": "ACTIVE",
-      "milestone": "تجربة الـBuild10 انتهت: حجم القوائم وتحديد الـPause واضحين، بس الواجهة مو مقبولة بعد. دا نصلّح تلميحات اللعب والمساعدة والتداخلات والحروف، بدون تغيير ميكانيك اللعب.",
+      "title_ar": "Build11 مبني وفحص الواجهة نجح",
+      "status": "BLOCKED",
+      "milestone": "انصلحت تلميحات اللعب والمساعدة والتداخلات والحروف، وانبنت الحزمة ونجح فحص ترتيب الواجهة ومراجعتها المستقلة. تجهيز التجربة توقف بحارس الوصول إلى Hermes؛ ما انفتحت اللعبة والقبول البصري بعده غير متحقق.",
       "milestone_basis": "REVIEWED_CHECKPOINT",
-      "blocker": null,
+      "blocker": "باقي تجهيز جلسة بوصول فعلي ثم تجربة بصرية؛ الواجهة بعد مو مقبولة",
       "outcome": "NOT_ACCEPTED",
       "branch": null,
       "completion_scope": "NOT_COMPLETE"
@@ -64,7 +64,7 @@
       "title": "FantasyRoam",
       "title_ar": "الخريطة محفوظة وفحصها الهندسي نجح",
       "status": "WAITING_FOR_MUHANNAD",
-      "milestone": "تصلّح كود التشغيل، ونجح التجميع والربط الفعلي للمحرّر. الخريطة تألّفت وانحفظت وأُعيد تحميلها، ونجح فحصها الهندسي المحدود. الشكل واللعب بعدهم مو مقبولين بشرياً.",
+      "milestone": "تصلّح كود التشغيل، ونجح التجميع والربط الفعلي للمحرّر. الخريطة تألّفت وانحفظت وأُعيد تحميلها، ونجح فحصها الهندسي المحدود، وانحفظت معاينة محلية للإنسان بدون تحليل صورتها. الشكل واللعب بعدهم مو مقبولين بشرياً.",
       "milestone_basis": "REVIEWED_CHECKPOINT",
       "blocker": "باقي فحص الشكل واللعب؛ نجاح الفحص الهندسي مو قبول بصري",
       "outcome": "NOT_ACCEPTED",
@@ -102,7 +102,7 @@
       "status": "ACTIVE",
       "milestone": "نشر الحالة وإرسال طلبات المراجعة الخاصة اشتغلن آلياً بجدولة n8n، وثبت منع التكرار بعد إعادة التشغيل. تفعيل ChatGPT ورجوع مراجعته بعدهن غير متحققين؛ ما استخدمنا Work أو أتمتة المتصفح.",
       "milestone_basis": "REVIEWED_CHECKPOINT",
-      "blocker": "ربط ChatGPT وقناة رجوع المراجعة يحتاجن آلية رسمية مسموحة ومهيّأة",
+      "blocker": "القراءة المجدولة مشروطة بالحساب؛ الكتابة الآلية ورجوع المراجعة والموافقات بعدهن غير متحققات",
       "outcome": "SCOPED_VERIFIED",
       "branch": null,
       "completion_scope": "NOT_COMPLETE"
