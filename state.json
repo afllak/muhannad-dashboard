@@ -98,11 +98,11 @@
     {
       "id": "n8n-windows-website",
       "title": "Windows automation",
-      "title_ar": "نشر مجدول للحالة الحقيقية",
+      "title_ar": "الحالة وطابور المراجعة يتحدّثن آلياً",
       "status": "ACTIVE",
-      "milestone": "ثبت مرور الحالة الحقيقية من السجل عبر n8n والحفظ المحلي إلى GitHub بجدولة أصلية، مع منع التكرار. هذا تحقق محدّد للمسار؛ مو اختبار لإقلاع Windows أو نشاط الوكلاء.",
+      "milestone": "نشر الحالة وإرسال طلبات المراجعة الخاصة اشتغلن آلياً بجدولة n8n، وثبت منع التكرار بعد إعادة التشغيل. تفعيل ChatGPT ورجوع مراجعته بعدهن غير متحققين؛ ما استخدمنا Work أو أتمتة المتصفح.",
       "milestone_basis": "REVIEWED_CHECKPOINT",
-      "blocker": "باقي التشغيل التلقائي واختبار إعادة تشغيل Windows",
+      "blocker": "ربط ChatGPT وقناة رجوع المراجعة يحتاجن آلية رسمية مسموحة ومهيّأة",
       "outcome": "SCOPED_VERIFIED",
       "branch": null,
       "completion_scope": "NOT_COMPLETE"
