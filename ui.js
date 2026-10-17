@@ -3,7 +3,19 @@ const labels={ACTIVE:'قيد العمل · ACTIVE',TESTING:'اختبار · TEST
 let last=null;
 const el=(tag, cls, text)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(text!=null)e.textContent=text;return e;};
 const valid=s=>s && s.schema_version===1 && Array.isArray(s.lanes) && Array.isArray(s.nodes) && s.lanes.every(l=>Object.hasOwn(labels,l.status));
+function renderContinuity(s){
+ const view=continuityView(s.continuity_watch,Date.now()),banner=document.getElementById('continuity-banner'),items=document.getElementById('continuity-findings');
+ document.getElementById('continuity-summary').textContent='فحص مقرر كل خمس دقائق · آخر تقييم: '+(view.evaluated_at||'غير متاح')+' · مو نبض Lead أو عامل.';
+ banner.hidden=view.state==='CLEAR';
+ banner.textContent=view.state==='CLEAR'?'ماكو خلل استمرارية مرصود ضمن آخر فحص؛ مو إثبات ONLINE.':view.state==='STALE'?'CONTINUITY WATCH STALE — تقييم المراقبة قديم؛ التنبيهات السابقة محفوظة وغير محسومة.':view.state==='ATTENTION'?'تنبيه استمرارية — '+view.findings.map(f=>f.label).join(' · '):'CONTINUITY OBSERVATION UNAVAILABLE — المراقبة غير متاحة أو ما عدنا رصد مثبت؛ مو حالة سليمة.';
+ document.title=banner.hidden?'Muhannad / لوحة المتابعة':'⚠ Continuity Watch — Muhannad';
+ items.replaceChildren();
+ view.findings.forEach(f=>{const row=el('article','lane');row.append(el('h3','latin',f.label+' · '+f.lane),el('p','blocker',f.detail),el('p','telemetry','أول رصد: '+f.first_observed_at));items.append(row);});
+ if(view.observation_status==='UNAVAILABLE')items.append(el('p','blocker','رصد العمّال غير مثبت؛ غياب الرصد مو دليل أن العامل انتهى.'));
+ if(view.state==='CLEAR')items.append(el('p','small','المسارات المتوقفة بسبب مانع موثّق مو مشكلة استمرارية بحد ذاتها.'));
+}
 function render(s){
+ renderContinuity(s);
  document.getElementById('checked').textContent=s.last_checked || 'UNKNOWN';
  document.getElementById('freshness').textContent=freshness(s.last_checked)==='STALE'?'لقطة قديمة · STALE':'آخر حالة محفوظة · CHECKPOINT';
  // Runtime health never substitutes for native Lead/worker observations.
