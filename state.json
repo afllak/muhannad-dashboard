@@ -14,7 +14,7 @@
       "title": "HOME Windows Lead",
       "connection": "UNKNOWN",
       "agent_heartbeat_at": null,
-      "runtime_heartbeat_at": "2026-10-17T23:45:00Z",
+      "runtime_heartbeat_at": "2026-10-17T23:50:00Z",
       "lead_observation": {
         "observed_state": "ACTIVE_TURN_OBSERVED",
         "observed_at": "2026-10-17T23:43:17.170174+00:00",
@@ -216,11 +216,26 @@
   ],
   "continuity_watch": {
     "check_interval_seconds": 300,
-    "evaluated_at": "2026-10-17T23:45:24.262363+00:00",
-    "findings": [],
-    "observation_status": "FRESH",
+    "evaluated_at": "2026-10-17T23:50:24.229011+00:00",
+    "findings": [
+      {
+        "code": "OBSERVATION_UNAVAILABLE",
+        "evidence": "NATIVE_OBSERVATION_UNAVAILABLE",
+        "first_observed_at": "2026-10-17T23:50:24.229011+00:00",
+        "severity": "warning",
+        "workstream_id": null
+      },
+      {
+        "code": "ACTIVE_WITHOUT_WORKER",
+        "evidence": "NO_FRESH_ATTESTATION",
+        "first_observed_at": "2026-10-17T23:50:24.229011+00:00",
+        "severity": "warning",
+        "workstream_id": "continuity-watchdog"
+      }
+    ],
+    "observation_status": "UNAVAILABLE",
     "schema_version": 1,
     "stale_after_seconds": 900,
-    "status": "CLEAR"
+    "status": "ATTENTION"
   }
 }
