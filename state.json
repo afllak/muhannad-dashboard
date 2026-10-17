@@ -14,7 +14,7 @@
       "title": "HOME Windows Lead",
       "connection": "UNKNOWN",
       "agent_heartbeat_at": null,
-      "runtime_heartbeat_at": "2026-10-17T23:50:00Z",
+      "runtime_heartbeat_at": "2026-10-17T23:55:00Z",
       "lead_observation": {
         "observed_state": "ACTIVE_TURN_OBSERVED",
         "observed_at": "2026-10-17T23:43:17.170174+00:00",
@@ -216,24 +216,31 @@
   ],
   "continuity_watch": {
     "check_interval_seconds": 300,
-    "evaluated_at": "2026-10-17T23:50:24.229011+00:00",
+    "evaluated_at": "2026-10-17T23:55:24.230799+00:00",
     "findings": [
       {
-        "code": "OBSERVATION_UNAVAILABLE",
-        "evidence": "NATIVE_OBSERVATION_UNAVAILABLE",
-        "first_observed_at": "2026-10-17T23:50:24.229011+00:00",
-        "severity": "warning",
+        "code": "LEAD_STALE",
+        "evidence": "RUNTIME_FRESH_LEAD_EXPIRED_GRACE",
+        "first_observed_at": "2026-10-17T23:55:24.230799+00:00",
+        "severity": "critical",
         "workstream_id": null
       },
       {
         "code": "ACTIVE_WITHOUT_WORKER",
-        "evidence": "NO_FRESH_ATTESTATION",
+        "evidence": "CONFIRMED_NO_MATCHING_DELEGATE",
         "first_observed_at": "2026-10-17T23:50:24.229011+00:00",
+        "severity": "warning",
+        "workstream_id": "continuity-watchdog"
+      },
+      {
+        "code": "FOLLOW_UP_NOT_STARTED",
+        "evidence": "TERMINAL_WORKER_NO_DISPOSITION",
+        "first_observed_at": "2026-10-17T23:55:24.230799+00:00",
         "severity": "warning",
         "workstream_id": "continuity-watchdog"
       }
     ],
-    "observation_status": "UNAVAILABLE",
+    "observation_status": "FRESH",
     "schema_version": 1,
     "stale_after_seconds": 900,
     "status": "ATTENTION"
