@@ -1,7 +1,7 @@
 'use strict';
 function health(stamp, now=Date.now()) {
  const age=now-Date.parse(stamp);
- return !stamp || !Number.isFinite(age) || age < -30000 ? 'UNKNOWN' : age > 90000 ? 'STALE' : 'RECENT_RUNTIME_ONLY';
+ return !stamp || !Number.isFinite(age) || age < -30000 ? 'UNKNOWN' : age > 900000 ? 'STALE' : 'RECENT_RUNTIME_ONLY';
 }
 function freshness(stamp, now=Date.now()) {
  const age=now-Date.parse(stamp);

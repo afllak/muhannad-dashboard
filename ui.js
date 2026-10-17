@@ -12,7 +12,10 @@ function render(s){
   card.append(el('span','badge unknown',n.connection==='NOT_CONNECTED'?'غير متصل · NOT CONNECTED':'الاتصال غير معروف · UNKNOWN'));
   card.append(el('p','small',n.id==='pi'?'لم يتم ربط الـPi أو الاتصال به.':'لا دليل نبض مباشر للـLead أو العمال. حالة المسار ليست إثبات اتصال.'));
   card.append(el('div','telemetry','Agent heartbeat: '+(n.agent_heartbeat_at || 'UNKNOWN')));
-  card.append(el('div','telemetry','Runtime: '+health(n.runtime_heartbeat_at)));nodes.append(card);
+  const runtime=health(n.runtime_heartbeat_at);
+  card.append(el('div','telemetry','Runtime: '+runtime));
+  if(runtime==='STALE')card.append(el('p','blocker','نبض التشغيل قديم / OFFLINE — تبقى آخر حالة محفوظة. مو دليل أن الحاسبة مطفّية.'));
+  nodes.append(card);
  });
  const active=document.getElementById('lanes'),history=document.getElementById('history');active.replaceChildren();history.replaceChildren();
  s.lanes.forEach(l=>{
@@ -23,12 +26,12 @@ function render(s){
   if(l.blocker)row.append(el('p','blocker','Gate / '+l.blocker));
   if(l.outcome==='SUPERSEDED')row.append(el('p','blocker','SUPERSEDED — not implemented / not deployed'));
   if(l.outcome==='FINDINGS_RETAINED')row.append(el('p','blocker','Review completed ≠ implementation PASS'));
-  (l.status==='DONE'?history:active).append(row);
+  (l.status==='DONE'||l.outcome==='SUPERSEDED'?history:active).append(row);
  });
 }
 async function refresh(){
  try{
-  const r=await fetch('state.json',{cache:'no-store'});if(!r.ok)throw Error('Unavailable');
+  const r=await fetch('https://raw.githubusercontent.com/afllak/muhannad-dashboard/hermes/live-state/state.json',{cache:'no-store',credentials:'omit',referrerPolicy:'no-referrer'});if(!r.ok)throw Error('Unavailable');
   const next=await r.json();if(!valid(next))throw Error('Invalid snapshot');last=retain(last,next);
   try{localStorage.setItem('public-checkpoint-v1',JSON.stringify(last));}catch{}
   render(last);document.getElementById('error').hidden=true;
@@ -39,4 +42,4 @@ async function refresh(){
 }
 try{const saved=JSON.parse(localStorage.getItem('public-checkpoint-v1'));if(valid(saved)){last=saved;render(last);}}catch{}
 refresh();setInterval(refresh,60000);
-setInterval(()=>{if(last)document.getElementById('freshness').textContent=freshness(last.last_checked)==='STALE'?'لقطة قديمة · STALE':'آخر حالة محفوظة · CHECKPOINT';},15000);
+setInterval(()=>{if(last)render(last);},15000);
