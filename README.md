@@ -2,7 +2,7 @@
 
 Static HTML/CSS/JavaScript and a sanitized, allowlisted last-known checkpoint. Arabic-friendly responsive layout. No commands, administrative endpoint, forms, credentials, external fonts, third-party libraries, telemetry, or private registry copy.
 
-`state.json` is the only publisher-updated file. Live Lead/worker heartbeat is UNKNOWN; Raspberry Pi is NOT_CONNECTED. A recent checkpoint is not an online agent. Runtime heartbeat evidence is separate and currently unknown in this public projection. Milestone prose is explicitly the foundation checkpoint, not inferred live progress. No percentages or synthetic test lanes.
+`state.json` is the only publisher-updated file. Live Lead/worker heartbeat is UNKNOWN; Raspberry Pi is NOT_CONNECTED. A recent checkpoint is not an online agent. Runtime heartbeat evidence is separate and currently unknown in this public projection. Milestone prose is explicitly a hand-reviewed checkpoint (`REVIEWED_CHECKPOINT`), not live or automatically inferred progress. FantasyRoam editor compile/link success does not establish native behavior acceptance. The separately verified synthetic n8n local route does not establish real-workstream ingestion or automatic publication. No percentages or synthetic test lanes.
 
 ```
 node --test test_app.cjs

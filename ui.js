@@ -19,7 +19,7 @@ function render(s){
   const row=el('article','lane'),heading=el('div','lane-head'),name=el('div','lane-name');
   name.append(el('h3','latin',l.title),el('p','arabic',l.title_ar));
   heading.append(name,el('span','badge '+l.status.toLowerCase(),labels[l.status]));row.append(heading,el('p','milestone',l.milestone));
-  const meta=el('div','lane-meta');meta.append(el('span','','Foundation milestone · آخر معلومة معروفة'),el('span','',l.branch?'Branch: '+l.branch:'Branch: UNKNOWN'));row.append(meta);
+  const meta=el('div','lane-meta');meta.append(el('span','','لقطة مراجَعة · مو تحديث مباشر'),el('span','',l.branch?'Branch: '+l.branch:'Branch: UNKNOWN'));row.append(meta);
   if(l.blocker)row.append(el('p','blocker','Gate / '+l.blocker));
   if(l.outcome==='SUPERSEDED')row.append(el('p','blocker','SUPERSEDED — not implemented / not deployed'));
   if(l.outcome==='FINDINGS_RETAINED')row.append(el('p','blocker','Review completed ≠ implementation PASS'));
