@@ -7,7 +7,9 @@ function render(s){
  document.getElementById('checked').textContent=s.last_checked || 'UNKNOWN';
  document.getElementById('freshness').textContent=freshness(s.last_checked)==='STALE'?'لقطة قديمة · STALE':'آخر حالة محفوظة · CHECKPOINT';
  // Runtime health never substitutes for native Lead/worker observations.
- document.getElementById('lead-status').textContent='Lead: UNKNOWN — لا ملاحظة نشاط مباشرة مثبتة';
+ const lead=leadObservation(s.nodes.find(n=>n.id==='home-windows')?.lead_observation);
+ document.getElementById('lead-status').textContent='Lead: '+leadState(lead,Date.now())+
+  (lead?' — ملاحظة دور محدودة بخمس دقائق، مو اتصال دائم · Observed: '+lead.observed_at+' · Expires: '+lead.expires_at:' — لا ملاحظة دور سارية مثبتة');
  const observed=s.lanes.map(l=>workerState(l.worker_observation));
  const activeWorkers=observed.filter(state=>state==='ACTIVE_DELEGATE_OBSERVED'||state==='RUNNING').length;
  document.getElementById('worker-status').textContent=activeWorkers?

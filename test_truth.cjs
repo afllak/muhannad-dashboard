@@ -25,9 +25,10 @@ function harness(){
  const document={createElement:()=>new Element(),getElementById:id=>{
   if(!elements.has(id))elements.set(id,new Element());return elements.get(id);
  }};
- const context={...app,document,localStorage:{getItem:()=>null,setItem:()=>{}},fetch:async()=>{throw Error('offline control');},setInterval:()=>{},Date,console};
+ const intervals=[];
+ const context={...app,document,localStorage:{getItem:()=>null,setItem:()=>{}},fetch:async()=>{throw Error('offline control');},setInterval:(fn,ms)=>intervals.push({fn,ms}),Date:class extends Date{},console};
  vm.createContext(context);vm.runInContext(fs.readFileSync(__dirname+'/ui.js','utf8'),context);
- return {context,elements};
+ return {context,elements,intervals};
 }
 test('actual renderer separates accepted Drop1, active Drop11, stale workers and runtime',async()=>{
  const {context,elements}=harness();
@@ -49,6 +50,33 @@ test('actual renderer separates accepted Drop1, active Drop11, stale workers and
  assert.match(elements.get('lanes').text,/Drop1.1 correction/);
  assert.equal(elements.get('error').hidden,false);
  assert.match(elements.get('error').textContent,/last-known snapshot retained/);
+});
+test('Lead renderer uses parent observation then expires offline while retaining original times',async()=>{
+ const {context,elements,intervals}=harness(),at=Date.parse('2026-01-01T00:00:00Z');
+ const lead={observed_state:'ACTIVE_TURN_OBSERVED',observed_at:'2026-01-01T00:00:00Z',expires_at:'2026-01-01T00:05:00+00:00',stale_after_seconds:300,basis:'HERMES_NATIVE_LEAD_TURN'};
+ const snapshot={schema_version:1,last_checked:lead.observed_at,nodes:[{id:'home-windows',title:'Windows',connection:'UNKNOWN',agent_heartbeat_at:null,runtime_heartbeat_at:lead.observed_at,lead_observation:lead}],lanes:[]};
+ context.clock=at+299999;vm.runInContext('Date.now=()=>clock;last='+JSON.stringify(snapshot),context);
+ context.render(snapshot);
+ assert.match(elements.get('lead-status').text,/ACTIVE_TURN_OBSERVED/);
+ assert.doesNotMatch(elements.get('lead-status').text,/ONLINE/);
+ assert.match(elements.get('lead-status').text,/2026-01-01T00:00:00Z/);
+ assert.match(elements.get('lead-status').text,/2026-01-01T00:05:00/);
+ context.clock=at+300000;intervals.find(i=>i.ms===15000).fn();
+ assert.match(elements.get('lead-status').text,/UNKNOWN/);
+ assert.match(elements.get('lead-status').text,/2026-01-01T00:00:00Z/);
+ await context.refresh();assert.match(elements.get('lead-status').text,/UNKNOWN/);
+ assert.equal(snapshot.nodes[0].agent_heartbeat_at,null);
+ for(const bad of [null,{...lead,observed_at:'future'},{...lead,stale_after_seconds:true},
+    {...lead,basis:'RUNTIME_CLOCK'},{...lead,observed_state:'ONLINE'},
+    {...lead,expires_at:'2099-01-01T00:00:00Z'},{...lead,session_id:'private'}]){
+  assert.equal(app.leadState?.(bad,at+1000),'UNKNOWN');
+ }
+ assert.equal(app.leadState?.(lead,at-1),'UNKNOWN');
+ assert.equal(app.leadState?.(lead,at),'ACTIVE_TURN_OBSERVED');
+});
+test('normalized invalid UTC calendar dates are not Lead observations',()=>{
+ const bad={observed_state:'ACTIVE_TURN_OBSERVED',observed_at:'2026-02-30T00:00:00Z',expires_at:'2026-02-30T00:05:00Z',stale_after_seconds:300,basis:'HERMES_NATIVE_LEAD_TURN'};
+ assert.equal(app.leadState(bad,Date.parse('2026-03-02T00:01:00Z')),'UNKNOWN');
 });
 test('index exposes dynamic worker summary without layout redesign',()=>{
  const html=fs.readFileSync(__dirname+'/index.html','utf8');
