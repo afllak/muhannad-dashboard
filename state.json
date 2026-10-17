@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "last_checked": "2026-10-17T22:49:51Z",
+  "last_checked": "2026-10-17T22:58:30Z",
   "provenance": "N8N_MATERIALIZED_REGISTRY_CHECKPOINT",
   "integration": "N8N_DURABLE_GITHUB",
-  "checkpoint": 556,
-  "source_revision": "6ed8bd01cfe5383d11d7192645cf004b7073806628259e7ce94519e95d30a74c",
+  "checkpoint": 571,
+  "source_revision": "8fd70fe64177dad7f0456477e35ea91bb6874eab1499094a317228b1a26cb211",
   "observation_semantics": "LAST_KNOWN_REGISTRY_NOT_LIVE_WORKER_PROOF",
   "source_time_basis": "REGISTRY_FILE_MTIME_NOT_LANE_EVENT_TIME",
   "runtime_stale_after_seconds": 900,
