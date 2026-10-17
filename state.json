@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "last_checked": "2026-10-17T21:57:01Z",
+  "last_checked": "2026-10-17T22:16:49Z",
   "provenance": "N8N_MATERIALIZED_REGISTRY_CHECKPOINT",
   "integration": "N8N_DURABLE_GITHUB",
-  "checkpoint": 410,
-  "source_revision": "a1bb6dbff09cd2a58ce42655974ac8c5cd28f562dbdfad6065b4b38115408523",
+  "checkpoint": 481,
+  "source_revision": "f8465950093d702ae0a24319d78b21c232464522bbdc5b14558929ae75fc51f4",
   "observation_semantics": "LAST_KNOWN_REGISTRY_NOT_LIVE_WORKER_PROOF",
   "source_time_basis": "REGISTRY_FILE_MTIME_NOT_LANE_EVENT_TIME",
   "runtime_stale_after_seconds": 900,
@@ -14,7 +14,7 @@
       "title": "HOME Windows Lead",
       "connection": "UNKNOWN",
       "agent_heartbeat_at": null,
-      "runtime_heartbeat_at": "2026-10-17T21:55:00Z"
+      "runtime_heartbeat_at": "2026-10-17T22:15:00Z"
     },
     {
       "id": "pi",
@@ -36,6 +36,25 @@
   ],
   "lanes": [
     {
+      "id": "drop-1-1-fast-playtest",
+      "title": "Drop1.1 · separate correction",
+      "title_ar": "مراجعة مرشح مستقل؛ مو إعادة فتح Drop1",
+      "status": "ACTIVE",
+      "milestone": "Drop1 الأساسي مقبول بعد Build11. المرشح التصحيحي المستقل بُني وانفحص ضمن نطاقه؛ المراجعة المستقلة وبوابة اختبار نقص المواد بعدهن مفتوحتين. هدف Area Foundation بعده مطلوب، وماكو قبول كامل للتحسين أو دعوة لعب.",
+      "milestone_basis": "REVIEWED_CHECKPOINT",
+      "blocker": "مراجعة المرشح وحسم اختبار نقص المواد؛ Area Foundation بعده الهدف الأساسي",
+      "outcome": "CORRECTION_IN_PROGRESS_NOT_ACCEPTED",
+      "branch": null,
+      "completion_scope": "NOT_COMPLETE",
+      "worker_observation": {
+        "observed_state": "ACTIVE_DELEGATE_OBSERVED",
+        "observed_at": "2026-10-17T22:16:41.263333+00:00",
+        "expires_at": "2026-10-17T22:21:41.263333+00:00",
+        "stale_after_seconds": 300,
+        "basis": "HERMES_NATIVE_DELEGATE_LIST"
+      }
+    },
+    {
       "id": "drop1-human-loop",
       "title": "Drop1 · accepted basic release",
       "title_ar": "Drop1 الأساسي مقبول وظيفياً ومنتهي",
@@ -45,7 +64,14 @@
       "blocker": null,
       "outcome": "FUNCTIONALLY_ACCEPTED",
       "branch": null,
-      "completion_scope": "ASSIGNMENT_CLOSED_NOT_IMPLEMENTATION_PASS"
+      "completion_scope": "ASSIGNMENT_CLOSED_NOT_IMPLEMENTATION_PASS",
+      "worker_observation": {
+        "observed_state": "NO_ACTIVE_DELEGATE_OBSERVED",
+        "observed_at": "2026-10-17T20:55:20.627506+00:00",
+        "expires_at": "2026-10-17T21:00:20.627506+00:00",
+        "stale_after_seconds": 300,
+        "basis": "HERMES_NATIVE_DELEGATE_LIST"
+      }
     },
     {
       "id": "drop1-ui-readability",
@@ -57,19 +83,33 @@
       "blocker": null,
       "outcome": "FUNCTIONALLY_ACCEPTED",
       "branch": null,
-      "completion_scope": "ASSIGNMENT_CLOSED_NOT_IMPLEMENTATION_PASS"
+      "completion_scope": "ASSIGNMENT_CLOSED_NOT_IMPLEMENTATION_PASS",
+      "worker_observation": {
+        "observed_state": "NO_ACTIVE_DELEGATE_OBSERVED",
+        "observed_at": "2026-10-17T20:55:20.627506+00:00",
+        "expires_at": "2026-10-17T21:00:20.627506+00:00",
+        "stale_after_seconds": 300,
+        "basis": "HERMES_NATIVE_DELEGATE_LIST"
+      }
     },
     {
       "id": "fantasy-roam-world",
       "title": "FantasyRoam",
-      "title_ar": "الخريطة القديمة مرفوضة وفحص الأصول المحدود نجح",
+      "title_ar": "مشهد صغير منفصل قيد التحضير والتحقق",
       "status": "ACTIVE",
-      "milestone": "الخريطة القديمة مرفوضة من مهند. قبلها نجح التجميع والربط الفعلي للمحرّر؛ وفحص الأصول الأصلي المحدود نجح بدون حزم مصدر متّسخة. ماكو مشهد بديل جديد أو إثبات بصري أو أداء؛ حادث مسار البناء محفوظ وبمراجعة Lead قبل الخطوة الأصلية الجاية.",
+      "milestone": "الخريطة القديمة مرفوضة من مهند؛ فحص الأصول المحدود السابق محفوظ. شغل المرشح الجديد يشمل تحضير المصدر ثم فحص البناء والمشهد حسب بوابات السلامة. تصنيف العمل لا يعني نجاح البناء أو وجود صور مقبولة أو إثبات الأداء.",
       "milestone_basis": "REVIEWED_CHECKPOINT",
-      "blocker": "مراجعة مسار البناء الآمن؛ المشهد البديل والقبول البصري بعدهم غير جاهزين",
+      "blocker": "نجاح الفحص الأصلي وقبول الصور يحتاجان أدلة منفصلة عن تصنيف العمل",
       "outcome": "OWNER_REJECTED_REPLACEMENT_IN_PROGRESS",
       "branch": null,
-      "completion_scope": "NOT_COMPLETE"
+      "completion_scope": "NOT_COMPLETE",
+      "worker_observation": {
+        "observed_state": "ACTIVE_DELEGATE_OBSERVED",
+        "observed_at": "2026-10-17T22:14:32.615425+00:00",
+        "expires_at": "2026-10-17T22:19:32.615425+00:00",
+        "stale_after_seconds": 300,
+        "basis": "HERMES_NATIVE_DELEGATE_LIST"
+      }
     },
     {
       "id": "fantasy-runtime-review",
@@ -81,7 +121,14 @@
       "blocker": null,
       "outcome": "SCOPED_VERIFIED",
       "branch": null,
-      "completion_scope": "ASSIGNMENT_CLOSED_NOT_IMPLEMENTATION_PASS"
+      "completion_scope": "ASSIGNMENT_CLOSED_NOT_IMPLEMENTATION_PASS",
+      "worker_observation": {
+        "observed_state": "NO_ACTIVE_DELEGATE_OBSERVED",
+        "observed_at": "2026-10-17T20:55:20.627506+00:00",
+        "expires_at": "2026-10-17T21:00:20.627506+00:00",
+        "stale_after_seconds": 300,
+        "basis": "HERMES_NATIVE_DELEGATE_LIST"
+      }
     },
     {
       "id": "hermes-update-ui",
@@ -93,19 +140,33 @@
       "blocker": null,
       "outcome": "SUPERSEDED",
       "branch": null,
-      "completion_scope": "CLOSED_SUPERSEDED_NOT_IMPLEMENTED"
+      "completion_scope": "CLOSED_SUPERSEDED_NOT_IMPLEMENTED",
+      "worker_observation": {
+        "observed_state": "NO_ACTIVE_DELEGATE_OBSERVED",
+        "observed_at": "2026-10-17T20:55:20.627506+00:00",
+        "expires_at": "2026-10-17T21:00:20.627506+00:00",
+        "stale_after_seconds": 300,
+        "basis": "HERMES_NATIVE_DELEGATE_LIST"
+      }
     },
     {
       "id": "n8n-windows-website",
       "title": "Windows automation",
-      "title_ar": "الحالة وطابور المراجعة يتحدّثن آلياً",
+      "title_ar": "تصحيح اتساق النشر؛ قراءة ChatGPT غير متحققة",
       "status": "ACTIVE",
-      "milestone": "نشر الحالة وإرسال طلبات المراجعة الخاصة اشتغلن آلياً بجدولة n8n، وثبت منع التكرار بعد إعادة التشغيل. تفعيل ChatGPT ورجوع مراجعته بعدهن غير متحققين؛ ما استخدمنا Work أو أتمتة المتصفح.",
+      "milestone": "جدولة Windows ونشر البيانات العامة تعملان؛ تناقض البيانات الخاصة وتغطية Drop1.1 قيد التصحيح والتحقق المتكرر. صحة الخدمة مو قبول Phase1. قراءة ChatGPT الحقيقية ورجوع مراجعته بعدهن غير متحققتين؛ ماكو أتمتة متصفح.",
       "milestone_basis": "REVIEWED_CHECKPOINT",
-      "blocker": "القراءة المجدولة مشروطة بالحساب؛ الكتابة الآلية ورجوع المراجعة والموافقات بعدهن غير متحققات",
-      "outcome": "SCOPED_VERIFIED",
+      "blocker": "قراءة الحساب الحقيقية مطلوبة بصورة مستقلة عن نجاح النشر؛ القبول الكامل بعده مفتوح",
+      "outcome": "PUBLICATION_RECOVERY_READER_UNVERIFIED",
       "branch": null,
-      "completion_scope": "NOT_COMPLETE"
+      "completion_scope": "NOT_COMPLETE",
+      "worker_observation": {
+        "observed_state": "NO_ACTIVE_DELEGATE_OBSERVED",
+        "observed_at": "2026-10-17T22:16:41.263333+00:00",
+        "expires_at": "2026-10-17T22:21:41.263333+00:00",
+        "stale_after_seconds": 300,
+        "basis": "HERMES_NATIVE_DELEGATE_LIST"
+      }
     },
     {
       "id": "nas-vm-provisioning",
@@ -117,7 +178,14 @@
       "blocker": null,
       "outcome": "SUPERSEDED",
       "branch": null,
-      "completion_scope": "CLOSED_SUPERSEDED_NOT_IMPLEMENTED"
+      "completion_scope": "CLOSED_SUPERSEDED_NOT_IMPLEMENTED",
+      "worker_observation": {
+        "observed_state": "NO_ACTIVE_DELEGATE_OBSERVED",
+        "observed_at": "2026-10-17T20:55:20.627506+00:00",
+        "expires_at": "2026-10-17T21:00:20.627506+00:00",
+        "stale_after_seconds": 300,
+        "basis": "HERMES_NATIVE_DELEGATE_LIST"
+      }
     },
     {
       "id": "truenas-backup-audit",
@@ -129,7 +197,14 @@
       "blocker": "مؤجّل حسب أولوية مهند",
       "outcome": "PARKED",
       "branch": null,
-      "completion_scope": "NOT_COMPLETE"
+      "completion_scope": "NOT_COMPLETE",
+      "worker_observation": {
+        "observed_state": "NO_ACTIVE_DELEGATE_OBSERVED",
+        "observed_at": "2026-10-17T20:55:20.627506+00:00",
+        "expires_at": "2026-10-17T21:00:20.627506+00:00",
+        "stale_after_seconds": 300,
+        "basis": "HERMES_NATIVE_DELEGATE_LIST"
+      }
     }
   ]
 }
