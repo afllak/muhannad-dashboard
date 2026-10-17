@@ -6,13 +6,21 @@ const valid=s=>s && s.schema_version===1 && Array.isArray(s.lanes) && Array.isAr
 function render(s){
  document.getElementById('checked').textContent=s.last_checked || 'UNKNOWN';
  document.getElementById('freshness').textContent=freshness(s.last_checked)==='STALE'?'لقطة قديمة · STALE':'آخر حالة محفوظة · CHECKPOINT';
+ // Runtime health never substitutes for native Lead/worker observations.
+ document.getElementById('lead-status').textContent='Lead: UNKNOWN — لا ملاحظة نشاط مباشرة مثبتة';
+ const observed=s.lanes.map(l=>workerState(l.worker_observation));
+ const activeWorkers=observed.filter(state=>state==='ACTIVE_DELEGATE_OBSERVED'||state==='RUNNING').length;
+ document.getElementById('worker-status').textContent=activeWorkers?
+  'Worker observations: '+activeWorkers+' ACTIVE_DELEGATE_OBSERVED — ملاحظات مسارات محدودة الصلاحية، مو عدد عمال فريد ولا اتصال دائم':
+  'Workers: UNKNOWN — ماكو ملاحظة تشغيل سارية؛ التفاصيل المحفوظة بكل مسار';
  const nodes=document.getElementById('nodes');nodes.replaceChildren();
  s.nodes.forEach(n=>{
   const card=el('article','node');card.append(el('div','overline',n.id==='pi'?'REMOTE / 02':'HOME / 01'),el('h3','latin',n.title));
-  card.append(el('span','badge unknown',n.connection==='NOT_CONNECTED'?'غير متصل · NOT CONNECTED':'الاتصال غير معروف · UNKNOWN'));
-  card.append(el('p','small',n.id==='pi'?'لم يتم ربط الـPi أو الاتصال به.':'لا دليل نبض مباشر للـLead أو العمال. حالة المسار ليست إثبات اتصال.'));
-  card.append(el('div','telemetry','Agent heartbeat: '+(n.agent_heartbeat_at || 'UNKNOWN')));
   const runtime=health(n.runtime_heartbeat_at);
+  const nodeLabel=n.connection==='NOT_CONNECTED'?'غير متصل · NOT CONNECTED':runtime==='RECENT_RUNTIME_ONLY'?'تشغيل الأتمتة حديث · RUNTIME RECENT':runtime==='STALE'?'نبض التشغيل قديم · STALE':'نبض التشغيل غير معروف · UNKNOWN';
+  card.append(el('span','badge unknown',nodeLabel));
+  card.append(el('p','small',n.id==='pi'?'لم يتم ربط الـPi أو الاتصال به.':'هذا وصف لتشغيل الأتمتة فقط، مو اتصال مباشر بالـLead. ملاحظات العمال منفصلة وتنتهي بصلاحيتها.'));
+  card.append(el('div','telemetry','Agent heartbeat: '+(n.agent_heartbeat_at || 'UNKNOWN')));
   card.append(el('div','telemetry','Runtime: '+runtime));
   if(runtime==='STALE')card.append(el('p','blocker','نبض التشغيل قديم / OFFLINE — تبقى آخر حالة محفوظة. مو دليل أن الحاسبة مطفّية.'));
   nodes.append(card);
@@ -23,6 +31,9 @@ function render(s){
   name.append(el('h3','latin',l.title),el('p','arabic',l.title_ar));
   heading.append(name,el('span','badge '+l.status.toLowerCase(),labels[l.status]));row.append(heading,el('p','milestone',l.milestone));
   const meta=el('div','lane-meta');meta.append(el('span','','لقطة مراجَعة · مو تحديث مباشر'),el('span','',l.branch?'Branch: '+l.branch:'Branch: UNKNOWN'));row.append(meta);
+  const worker=l.worker_observation;
+  row.append(el('div','telemetry','Worker: '+workerState(worker)));
+  if(worker && worker.observed_at)row.append(el('div','telemetry','Observed: '+worker.observed_at+' · Expires: '+worker.expires_at));
   if(l.blocker)row.append(el('p','blocker','Gate / '+l.blocker));
   if(l.outcome==='SUPERSEDED')row.append(el('p','blocker','SUPERSEDED — not implemented / not deployed'));
   if(l.outcome==='FINDINGS_RETAINED')row.append(el('p','blocker','Review completed ≠ implementation PASS'));
