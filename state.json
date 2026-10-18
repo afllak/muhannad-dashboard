@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "last_checked": "2026-10-18T00:29:19Z",
+  "last_checked": "2026-10-18T01:29:29Z",
   "provenance": "N8N_MATERIALIZED_REGISTRY_CHECKPOINT",
   "integration": "N8N_DURABLE_GITHUB",
-  "checkpoint": 736,
-  "source_revision": "90e17c9d596818b374ce9ce345734f9343d9bcacc84fb06d96cc78083bc55369",
+  "checkpoint": 766,
+  "source_revision": "2508fb0619c10c29746c0f19d2c4d364b0bb858a26683433f5b78fefeff7c69a",
   "observation_semantics": "LAST_KNOWN_REGISTRY_NOT_LIVE_WORKER_PROOF",
   "source_time_basis": "REGISTRY_FILE_MTIME_NOT_LANE_EVENT_TIME",
   "runtime_stale_after_seconds": 900,
@@ -14,11 +14,11 @@
       "title": "HOME Windows Lead",
       "connection": "UNKNOWN",
       "agent_heartbeat_at": null,
-      "runtime_heartbeat_at": "2026-10-18T00:45:00Z",
+      "runtime_heartbeat_at": "2026-10-18T18:15:00Z",
       "lead_observation": {
         "observed_state": "ACTIVE_TURN_OBSERVED",
-        "observed_at": "2026-10-18T00:29:12.815131+00:00",
-        "expires_at": "2026-10-18T00:34:12.815131+00:00",
+        "observed_at": "2026-10-18T00:47:28.501798+00:00",
+        "expires_at": "2026-10-18T00:52:28.501798+00:00",
         "stale_after_seconds": 300,
         "basis": "HERMES_NATIVE_LEAD_TURN"
       }
