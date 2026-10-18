@@ -216,26 +216,11 @@
   ],
   "continuity_watch": {
     "check_interval_seconds": 300,
-    "evaluated_at": "2026-10-18T00:20:24.230435+00:00",
-    "findings": [
-      {
-        "code": "OBSERVATION_UNAVAILABLE",
-        "evidence": "NATIVE_OBSERVATION_UNAVAILABLE",
-        "first_observed_at": "2026-10-18T00:05:24.232159+00:00",
-        "severity": "warning",
-        "workstream_id": null
-      },
-      {
-        "code": "FOLLOW_UP_NOT_STARTED",
-        "evidence": "TERMINAL_WORKER_BLOCKER_UNVERIFIED",
-        "first_observed_at": "2026-10-18T00:10:24.244623+00:00",
-        "severity": "warning",
-        "workstream_id": "chatgpt-review-integration"
-      }
-    ],
-    "observation_status": "UNAVAILABLE",
+    "evaluated_at": "2026-10-18T00:25:24.245684+00:00",
+    "findings": [],
+    "observation_status": "FRESH",
     "schema_version": 1,
     "stale_after_seconds": 900,
-    "status": "ATTENTION"
+    "status": "CLEAR"
   }
 }
