@@ -216,7 +216,7 @@
   ],
   "continuity_watch": {
     "check_interval_seconds": 300,
-    "evaluated_at": "2026-10-18T00:15:24.239433+00:00",
+    "evaluated_at": "2026-10-18T00:20:24.230435+00:00",
     "findings": [
       {
         "code": "OBSERVATION_UNAVAILABLE",
