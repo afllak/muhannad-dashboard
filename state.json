@@ -216,15 +216,8 @@
   ],
   "continuity_watch": {
     "check_interval_seconds": 300,
-    "evaluated_at": "2026-10-18T00:10:24.244623+00:00",
+    "evaluated_at": "2026-10-18T00:15:24.239433+00:00",
     "findings": [
-      {
-        "code": "LEAD_STALE",
-        "evidence": "RUNTIME_FRESH_LEAD_EXPIRED_GRACE",
-        "first_observed_at": "2026-10-18T00:10:24.244623+00:00",
-        "severity": "critical",
-        "workstream_id": null
-      },
       {
         "code": "OBSERVATION_UNAVAILABLE",
         "evidence": "NATIVE_OBSERVATION_UNAVAILABLE",
@@ -233,15 +226,8 @@
         "workstream_id": null
       },
       {
-        "code": "ACTIVE_WITHOUT_WORKER",
-        "evidence": "NO_FRESH_ATTESTATION",
-        "first_observed_at": "2026-10-18T00:05:24.232159+00:00",
-        "severity": "warning",
-        "workstream_id": "chatgpt-review-integration"
-      },
-      {
         "code": "FOLLOW_UP_NOT_STARTED",
-        "evidence": "TERMINAL_WORKER_NO_DISPOSITION",
+        "evidence": "TERMINAL_WORKER_BLOCKER_UNVERIFIED",
         "first_observed_at": "2026-10-18T00:10:24.244623+00:00",
         "severity": "warning",
         "workstream_id": "chatgpt-review-integration"
