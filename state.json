@@ -14,7 +14,7 @@
       "title": "HOME Windows Lead",
       "connection": "UNKNOWN",
       "agent_heartbeat_at": null,
-      "runtime_heartbeat_at": "2026-10-18T00:40:00Z",
+      "runtime_heartbeat_at": "2026-10-18T00:45:00Z",
       "lead_observation": {
         "observed_state": "ACTIVE_TURN_OBSERVED",
         "observed_at": "2026-10-18T00:29:12.815131+00:00",
@@ -216,7 +216,7 @@
   ],
   "continuity_watch": {
     "check_interval_seconds": 300,
-    "evaluated_at": "2026-10-18T00:40:24.228310+00:00",
+    "evaluated_at": "2026-10-18T00:45:24.230116+00:00",
     "findings": [
       {
         "code": "LEAD_STALE",
