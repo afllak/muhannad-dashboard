@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "integration": "LOCAL_SUPERVISOR_BUS_PROTOTYPE",
-  "generated_at": "2026-10-19T23:32:00.159361Z",
+  "generated_at": "2026-10-19T23:32:05.162667Z",
   "hermes_status": "ADAPTER_FRESH",
   "work_status": "ACTIVE_OBSERVED",
   "bus_health": "HEALTHY",
   "pending_count": 1,
-  "oldest_pending_age_seconds": 2,
+  "oldest_pending_age_seconds": 7,
   "last_verified_update": "2026-10-19T23:31:54.043359Z",
   "last_hermes_message": "2026-10-19T23:31:57.222360Z",
   "last_work_response": "2026-10-19T23:31:53.598522Z",
@@ -25,7 +25,7 @@
     "No further synthetic turns"
   ],
   "safely_stopped": true,
-  "notification_status": "OUTBOX_READY",
+  "notification_status": "LOCAL_ACCEPTED_NOT_VERIFIED",
   "adapter_freshness": "FRESH",
   "work_idle_wakeup": "NOT_VERIFIED",
   "games_hold": true
