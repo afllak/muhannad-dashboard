@@ -23,7 +23,7 @@
     if (!panel) return;
     const grid = doc.getElementById('supervisor-grid'); grid.replaceChildren();
     const rows = [ ['Hermes',value.hermes_status], ['Work Supervisor',value.work_status], ['Bus health',value.bus_health],
-      ['آخر ACK مثبت',value.last_ack || 'UNKNOWN'], ['آخر Hermes → Work',value.last_hermes_message || 'UNKNOWN'],
+      ['آخر تحديث مثبت',value.last_verified_update || 'UNKNOWN'], ['آخر ACK مثبت',value.last_ack || 'UNKNOWN'], ['آخر Hermes → Work',value.last_hermes_message || 'UNKNOWN'],
       ['آخر رد Work → Hermes',value.last_work_response || 'UNKNOWN'], ['رسائل معلقة',String(value.pending_count)],
       ['عمر أقدم رسالة / ثانية',String(value.oldest_pending_age_seconds)], ['مراجعات معلقة',String(value.pending_review_count)],
       ['حداثة Adapter',value.adapter_freshness], ['المسار',value.current_workstream], ['العائق الحالي',value.genuine_blocker || 'لا عائق مسجل'],
@@ -38,6 +38,7 @@
     const decision = doc.getElementById('supervisor-decision'); decision.replaceChildren();
     const heading = doc.createElement('h3');heading.textContent = state.needsOwner ? 'Needs Muhannad — قرار مطلوب' : 'ماكو قرار معلق بهذه التجربة';decision.append(heading);
     if (state.needsOwner) {
+      const why=doc.createElement('p');why.textContent='السبب: اختبار تصعيد اصطناعي فقط؛ الخطوة التابعة للقرار متوقفة.';decision.append(why);
       const p=doc.createElement('p');p.textContent=value.decision_summary;decision.append(p);
       value.decision_options.forEach((option,i)=>{const row=doc.createElement('p');row.textContent=option+' — '+(value.decision_impact[i]||'');decision.append(row);});
       const stop=doc.createElement('p');stop.textContent=state.stopped ? 'المسار متوقف بأمان بانتظار القرار.' : 'حالة التوقف غير مثبتة.';decision.append(stop);

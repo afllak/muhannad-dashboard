@@ -2,3 +2,4 @@
 
 /* Scoped Supervisor pilot: preserve the existing dashboard layout. */
 .supervisor-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:22px 0}.supervisor-grid>div{border:1px solid #26353b;border-radius:10px;padding:13px;min-width:0}.supervisor-grid dt{font-size:12px;opacity:.7;margin-bottom:7px}.supervisor-grid dd{margin:0;overflow-wrap:anywhere;unicode-bidi:plaintext;font-size:14px}#supervisor-decision{border-inline-start:3px solid #9dc8bb;padding-inline-start:18px}
+#supervisor-bus{display:block}#supervisor-bus h2{margin-bottom:16px}#supervisor-bus>p{margin:12px 0}#supervisor-freshness{unicode-bidi:plaintext}#supervisor-decision p{margin:10px 0}
