@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "integration": "LOCAL_SUPERVISOR_BUS_PROTOTYPE",
-  "generated_at": "2026-10-19T23:37:00.106368Z",
+  "generated_at": "2026-10-19T23:38:00.074995Z",
   "hermes_status": "ADAPTER_FRESH",
-  "work_status": "ACTIVE_OBSERVED",
+  "work_status": "UNKNOWN",
   "bus_health": "HEALTHY",
   "pending_count": 0,
   "oldest_pending_age_seconds": 0,
