@@ -235,12 +235,12 @@
     {
       "id": "website-dashboard-v2",
       "title": "Website dashboard · V2",
-      "title_ar": "مقبول ومأذون نشره؛ النشر الفعلي بعده ما تنفذ",
+      "title_ar": "V2 الحالية منشورة ومتحقق منها",
       "status": "ACTIVE",
-      "milestone": "مهند قبل V2 وأذن بنشر الموقع. القبول وإذن النشر محفوظان؛ النشر الفعلي بعده ما تنفذ. اكتمال البيانات الحالية للمشاريع الأربعة والتحقق من الموقع المنشور بوابتان منفصلتان؛ قبول التصميم مو دليل نشر أو حداثة بيانات.",
+      "milestone": "مهند قبل V2، ونُشرت لتكون النسخة الحالية. تم التحقق من بناء Pages ومن الصفحة والأصول الفعلية. معلومات المشاريع الأربعة تمر عبر مسار البيانات القائم مع أوقات الرصد وحدود UNKNOWN وSTALE؛ نجاح الموقع مو قبولاً للعبة أو لفحوص تشغيلها.",
       "milestone_basis": "REVIEWED_CHECKPOINT",
-      "blocker": "اكتمال مسار البيانات الحالية ثم التحقق من النشر الفعلي",
-      "outcome": "ACCEPTED_PUBLICATION_AUTHORIZED_NOT_DEPLOYED",
+      "blocker": null,
+      "outcome": "DEPLOYED_CURRENT_SITE_VERIFIED",
       "branch": null,
       "completion_scope": "NOT_COMPLETE",
       "worker_observation": {
