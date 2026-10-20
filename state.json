@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "last_checked": "2026-10-18T01:29:29Z",
+  "last_checked": "2026-10-20T21:52:21Z",
   "provenance": "N8N_MATERIALIZED_REGISTRY_CHECKPOINT",
   "integration": "N8N_DURABLE_GITHUB",
-  "checkpoint": 766,
-  "source_revision": "2508fb0619c10c29746c0f19d2c4d364b0bb858a26683433f5b78fefeff7c69a",
+  "checkpoint": 800,
+  "source_revision": "25d14650a91b23ed8469f1a1f9d154cd24f84b58c939169d38ec8d04339b909c",
   "observation_semantics": "LAST_KNOWN_REGISTRY_NOT_LIVE_WORKER_PROOF",
   "source_time_basis": "REGISTRY_FILE_MTIME_NOT_LANE_EVENT_TIME",
   "runtime_stale_after_seconds": 900,
@@ -14,11 +14,11 @@
       "title": "HOME Windows Lead",
       "connection": "UNKNOWN",
       "agent_heartbeat_at": null,
-      "runtime_heartbeat_at": "2026-10-20T03:20:00Z",
+      "runtime_heartbeat_at": "2026-10-20T21:50:00Z",
       "lead_observation": {
         "observed_state": "ACTIVE_TURN_OBSERVED",
-        "observed_at": "2026-10-18T00:47:28.501798+00:00",
-        "expires_at": "2026-10-18T00:52:28.501798+00:00",
+        "observed_at": "2026-10-20T21:52:03.820254+00:00",
+        "expires_at": "2026-10-20T21:57:03.820254+00:00",
         "stale_after_seconds": 300,
         "basis": "HERMES_NATIVE_LEAD_TURN"
       }
@@ -45,18 +45,18 @@
     {
       "id": "drop-1-1-fast-playtest",
       "title": "Drop1.1 · separate correction",
-      "title_ar": "مراجعة مرشح مستقل؛ مو إعادة فتح Drop1",
+      "title_ar": "متحكم تشغيل جانبي متحقق بمعزل؛ مو جاهزية لعب",
       "status": "BLOCKED",
-      "milestone": "Drop1 الأساسي مقبول بعد Build11. المرشح التصحيحي المستقل بُني وانفحص ضمن نطاقه؛ المراجعة المستقلة وبوابة اختبار نقص المواد بعدهن مفتوحتين. هدف Area Foundation بعده مطلوب، وماكو قبول كامل للتحسين أو دعوة لعب.",
+      "milestone": "Drop1 الأساسي مقبول بعد Build11؛ التحسين مستقل وهدف Area Foundation باقي. العامل أكمل 43 اختباراً معزولاً، منها مهلة فعلية آمنة 120 ثانية لعملية Python بسيطة. المراجعة المستقلة جمعت 43 اختباراً بلا فشل مع تجاوز اختبار بطيء واحد. هذا مو بناء أو تشغيل للعبة ولا جاهزية أصلية؛ ماكو محول إدخال عادي وقناة رصد حقيقيين، وG1 مو مسلح وما نجح.",
       "milestone_basis": "REVIEWED_CHECKPOINT",
-      "blocker": "مراجعة المرشح وحسم اختبار نقص المواد؛ Area Foundation بعده الهدف الأساسي",
+      "blocker": "يلزم محول إدخال ورصد حقيقيان وربط المصدر ببناء وحزمة جديدين وإذن تشغيل صالح؛ مو دعوة لعب",
       "outcome": "CORRECTION_IN_PROGRESS_NOT_ACCEPTED",
       "branch": null,
       "completion_scope": "NOT_COMPLETE",
       "worker_observation": {
         "observed_state": "NO_ACTIVE_DELEGATE_OBSERVED",
-        "observed_at": "2026-10-17T22:49:42.133932+00:00",
-        "expires_at": "2026-10-17T22:54:42.133932+00:00",
+        "observed_at": "2026-10-20T21:52:03.820254+00:00",
+        "expires_at": "2026-10-20T21:57:03.820254+00:00",
         "stale_after_seconds": 300,
         "basis": "HERMES_NATIVE_DELEGATE_LIST"
       }
@@ -102,18 +102,18 @@
     {
       "id": "fantasy-roam-world",
       "title": "FantasyRoam",
-      "title_ar": "مشهد صغير منفصل قيد التحضير والتحقق",
+      "title_ar": "تصحيح ملف مصدر واحد؛ التحقق الأصلي بعده محجوب",
       "status": "BLOCKED",
-      "milestone": "الخريطة القديمة مرفوضة من مهند؛ فحص الأصول المحدود السابق محفوظ. شغل المرشح الجديد يشمل تحضير المصدر ثم فحص البناء والمشهد حسب بوابات السلامة. تصنيف العمل لا يعني نجاح البناء أو وجود صور مقبولة أو إثبات الأداء.",
+      "milestone": "الخريطة القديمة مرفوضة من مهند؛ فحص الأصول المحدود السابق محفوظ. طُبق تصحيح ملف CPP واحد وانفحص تطابق التغيير؛ الفحص المسجل للنموذج الثابت نجح في 21 من 21 بعد فشل 9 سابقاً. النتيجة مصدر فقط؛ ما صار بناء أو تشغيل أصلي ولا قبول للشكل. بوابة Analytics بعدَها غير محسومة، وتهيئة عالم المحرر الحقيقي قبل Main تحتاج مراجعة سلامة وسيطرة.",
       "milestone_basis": "REVIEWED_CHECKPOINT",
-      "blocker": "نجاح الفحص الأصلي وقبول الصور يحتاجان أدلة منفصلة عن تصنيف العمل",
+      "blocker": "حسم Analytics وسلامة التهيئة قبل Main ثم إذن بناء وتشغيل صالح؛ لا قبول بصري من فحص المصدر",
       "outcome": "OWNER_REJECTED_REPLACEMENT_IN_PROGRESS",
       "branch": null,
       "completion_scope": "NOT_COMPLETE",
       "worker_observation": {
         "observed_state": "NO_ACTIVE_DELEGATE_OBSERVED",
-        "observed_at": "2026-10-17T22:49:42.133932+00:00",
-        "expires_at": "2026-10-17T22:54:42.133932+00:00",
+        "observed_at": "2026-10-20T21:52:03.820254+00:00",
+        "expires_at": "2026-10-20T21:57:03.820254+00:00",
         "stale_after_seconds": 300,
         "basis": "HERMES_NATIVE_DELEGATE_LIST"
       }
@@ -157,11 +157,30 @@
       }
     },
     {
+      "id": "hermesgametest-original",
+      "title": "HermesGameTest · original",
+      "title_ar": "أدلة PSO محفوظة؛ المشكلة الأصلية بعدَها مفتوحة",
+      "status": "BLOCKED",
+      "milestone": "اكتمل فحص الأدلة المحفوظة بدون تشغيل: 112 فحص اتساق و16 اختباراً مسجلاً ناجحة؛ الاختبارات مو إعادة تشغيل جديدة. المشكلة 21 الخاصة بـ PSO بعدَها غير محسومة؛ ماكو إثبات للسبب الدقيق أو إصلاح، وما صار تعديل مصدر أو بناء أو تشغيل أصلي ضمن هذا الفحص.",
+      "milestone_basis": "REVIEWED_CHECKPOINT",
+      "blocker": "أدلة الاستدعاء الفاشل الكاملة غير متوفرة؛ أي فحص أصلي أو التقاط جديد يحتاج نطاقاً مأذوناً",
+      "outcome": "OFFLINE_EVIDENCE_VERIFIED_PSO_UNRESOLVED",
+      "branch": null,
+      "completion_scope": "NOT_COMPLETE",
+      "worker_observation": {
+        "observed_state": "NO_ACTIVE_DELEGATE_OBSERVED",
+        "observed_at": "2026-10-20T21:52:03.820254+00:00",
+        "expires_at": "2026-10-20T21:57:03.820254+00:00",
+        "stale_after_seconds": 300,
+        "basis": "HERMES_NATIVE_DELEGATE_LIST"
+      }
+    },
+    {
       "id": "n8n-windows-website",
       "title": "Windows automation",
-      "title_ar": "المرحلة الأولى متحققة؛ قراءة ChatGPT مؤكدة",
+      "title_ar": "تحقق تاريخي للمرحلة الأولى وقراءة ChatGPT",
       "status": "DONE",
-      "milestone": "مهند أكد أن ChatGPT قرأ الحالة مباشرة من المستودع الخاص عند checkpoint 571 بدون نسخ يدوي. مسار Hermes إلى n8n إلى GitHub الخاص إلى القارئ متحقق، والنشر التلقائي مستمر. رجوع المراجعات مرحلة مستقلة قيد التنفيذ المحدود؛ ماكو أتمتة متصفح أو صلاحية أوامر تلقائية.",
+      "milestone": "مهند أكد تاريخياً أن ChatGPT قرأ الحالة مباشرة من المستودع الخاص عند checkpoint 571 بدون نسخ يدوي. هذا إثبات محفوظ للمسار السابق، مو دليل على صحة التشغيل أو حداثة النشر الحالي؛ تنقاس من الرصد الفعلي وتوقيته. رجوع المراجعات مرحلة مستقلة؛ النقل ما يمنح صلاحية أوامر تلقائية.",
       "milestone_basis": "REVIEWED_CHECKPOINT",
       "blocker": null,
       "outcome": "FORWARD_READER_VERIFIED",
@@ -209,6 +228,25 @@
         "observed_state": "NO_ACTIVE_DELEGATE_OBSERVED",
         "observed_at": "2026-10-17T20:55:20.627506+00:00",
         "expires_at": "2026-10-17T21:00:20.627506+00:00",
+        "stale_after_seconds": 300,
+        "basis": "HERMES_NATIVE_DELEGATE_LIST"
+      }
+    },
+    {
+      "id": "website-dashboard-v2",
+      "title": "Website dashboard · V2",
+      "title_ar": "مقبول ومأذون نشره؛ النشر الفعلي بعده ما تنفذ",
+      "status": "ACTIVE",
+      "milestone": "مهند قبل V2 وأذن بنشر الموقع. القبول وإذن النشر محفوظان؛ النشر الفعلي بعده ما تنفذ. اكتمال البيانات الحالية للمشاريع الأربعة والتحقق من الموقع المنشور بوابتان منفصلتان؛ قبول التصميم مو دليل نشر أو حداثة بيانات.",
+      "milestone_basis": "REVIEWED_CHECKPOINT",
+      "blocker": "اكتمال مسار البيانات الحالية ثم التحقق من النشر الفعلي",
+      "outcome": "ACCEPTED_PUBLICATION_AUTHORIZED_NOT_DEPLOYED",
+      "branch": null,
+      "completion_scope": "NOT_COMPLETE",
+      "worker_observation": {
+        "observed_state": "NO_ACTIVE_DELEGATE_OBSERVED",
+        "observed_at": "2026-10-20T21:52:03.820254+00:00",
+        "expires_at": "2026-10-20T21:57:03.820254+00:00",
         "stale_after_seconds": 300,
         "basis": "HERMES_NATIVE_DELEGATE_LIST"
       }
