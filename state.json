@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "last_checked": "2026-10-20T21:52:21Z",
+  "last_checked": "2026-10-20T22:05:26Z",
   "provenance": "N8N_MATERIALIZED_REGISTRY_CHECKPOINT",
   "integration": "N8N_DURABLE_GITHUB",
-  "checkpoint": 800,
-  "source_revision": "25d14650a91b23ed8469f1a1f9d154cd24f84b58c939169d38ec8d04339b909c",
+  "checkpoint": 817,
+  "source_revision": "6413cf36074ac93ebc194c7c895fa8ad02cb4c1cc4b1df1654c27223fe5ea244",
   "observation_semantics": "LAST_KNOWN_REGISTRY_NOT_LIVE_WORKER_PROOF",
   "source_time_basis": "REGISTRY_FILE_MTIME_NOT_LANE_EVENT_TIME",
   "runtime_stale_after_seconds": 900,
@@ -14,11 +14,11 @@
       "title": "HOME Windows Lead",
       "connection": "UNKNOWN",
       "agent_heartbeat_at": null,
-      "runtime_heartbeat_at": "2026-10-20T22:00:00Z",
+      "runtime_heartbeat_at": "2026-10-20T22:05:00Z",
       "lead_observation": {
         "observed_state": "ACTIVE_TURN_OBSERVED",
-        "observed_at": "2026-10-20T21:52:03.820254+00:00",
-        "expires_at": "2026-10-20T21:57:03.820254+00:00",
+        "observed_at": "2026-10-20T22:04:58.052919+00:00",
+        "expires_at": "2026-10-20T22:09:58.052919+00:00",
         "stale_after_seconds": 300,
         "basis": "HERMES_NATIVE_LEAD_TURN"
       }
@@ -55,8 +55,8 @@
       "completion_scope": "NOT_COMPLETE",
       "worker_observation": {
         "observed_state": "NO_ACTIVE_DELEGATE_OBSERVED",
-        "observed_at": "2026-10-20T21:52:03.820254+00:00",
-        "expires_at": "2026-10-20T21:57:03.820254+00:00",
+        "observed_at": "2026-10-20T22:04:58.052919+00:00",
+        "expires_at": "2026-10-20T22:09:58.052919+00:00",
         "stale_after_seconds": 300,
         "basis": "HERMES_NATIVE_DELEGATE_LIST"
       }
@@ -112,8 +112,8 @@
       "completion_scope": "NOT_COMPLETE",
       "worker_observation": {
         "observed_state": "NO_ACTIVE_DELEGATE_OBSERVED",
-        "observed_at": "2026-10-20T21:52:03.820254+00:00",
-        "expires_at": "2026-10-20T21:57:03.820254+00:00",
+        "observed_at": "2026-10-20T22:04:58.052919+00:00",
+        "expires_at": "2026-10-20T22:09:58.052919+00:00",
         "stale_after_seconds": 300,
         "basis": "HERMES_NATIVE_DELEGATE_LIST"
       }
@@ -169,8 +169,8 @@
       "completion_scope": "NOT_COMPLETE",
       "worker_observation": {
         "observed_state": "NO_ACTIVE_DELEGATE_OBSERVED",
-        "observed_at": "2026-10-20T21:52:03.820254+00:00",
-        "expires_at": "2026-10-20T21:57:03.820254+00:00",
+        "observed_at": "2026-10-20T22:04:58.052919+00:00",
+        "expires_at": "2026-10-20T22:09:58.052919+00:00",
         "stale_after_seconds": 300,
         "basis": "HERMES_NATIVE_DELEGATE_LIST"
       }
@@ -236,17 +236,17 @@
       "id": "website-dashboard-v2",
       "title": "Website dashboard · V2",
       "title_ar": "V2 الحالية منشورة ومتحقق منها",
-      "status": "ACTIVE",
+      "status": "DONE",
       "milestone": "مهند قبل V2، ونُشرت لتكون النسخة الحالية. تم التحقق من بناء Pages ومن الصفحة والأصول الفعلية. معلومات المشاريع الأربعة تمر عبر مسار البيانات القائم مع أوقات الرصد وحدود UNKNOWN وSTALE؛ نجاح الموقع مو قبولاً للعبة أو لفحوص تشغيلها.",
       "milestone_basis": "REVIEWED_CHECKPOINT",
       "blocker": null,
       "outcome": "DEPLOYED_CURRENT_SITE_VERIFIED",
       "branch": null,
-      "completion_scope": "NOT_COMPLETE",
+      "completion_scope": "ASSIGNMENT_CLOSED_NOT_IMPLEMENTATION_PASS",
       "worker_observation": {
         "observed_state": "NO_ACTIVE_DELEGATE_OBSERVED",
-        "observed_at": "2026-10-20T21:52:03.820254+00:00",
-        "expires_at": "2026-10-20T21:57:03.820254+00:00",
+        "observed_at": "2026-10-20T22:04:58.052919+00:00",
+        "expires_at": "2026-10-20T22:09:58.052919+00:00",
         "stale_after_seconds": 300,
         "basis": "HERMES_NATIVE_DELEGATE_LIST"
       }
