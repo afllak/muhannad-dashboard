@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "last_checked": "2026-10-20T22:29:27Z",
+  "last_checked": "2026-10-20T23:14:06Z",
   "provenance": "N8N_MATERIALIZED_REGISTRY_CHECKPOINT",
   "integration": "N8N_DURABLE_GITHUB",
-  "checkpoint": 834,
-  "source_revision": "bf22c095572ef4dd9fb45afff9e15a2469bb7f06e9da391dcd83801655609826",
+  "checkpoint": 851,
+  "source_revision": "8a7b39f42183ec1a668add27c0324a1259f65d9c755dec895aa1c52d55526b4e",
   "observation_semantics": "LAST_KNOWN_REGISTRY_NOT_LIVE_WORKER_PROOF",
   "source_time_basis": "REGISTRY_FILE_MTIME_NOT_LANE_EVENT_TIME",
   "runtime_stale_after_seconds": 900,
@@ -14,7 +14,7 @@
       "title": "HOME Windows Lead",
       "connection": "UNKNOWN",
       "agent_heartbeat_at": null,
-      "runtime_heartbeat_at": "2026-10-20T22:45:00Z",
+      "runtime_heartbeat_at": "2026-10-20T23:15:00Z",
       "lead_observation": {
         "observed_state": "ACTIVE_TURN_OBSERVED",
         "observed_at": "2026-10-20T22:29:07.289434+00:00",
@@ -46,7 +46,7 @@
       "id": "drop-1-1-fast-playtest",
       "title": "Drop1.1 · separate correction",
       "title_ar": "متحكم تشغيل جانبي متحقق بمعزل؛ مو جاهزية لعب",
-      "status": "ACTIVE",
+      "status": "BLOCKED",
       "milestone": "Drop1 الأساسي مقبول بعد Build11؛ التحسين مستقل وهدف Area Foundation باقي. العامل أكمل 43 اختباراً معزولاً، منها مهلة فعلية آمنة 120 ثانية لعملية Python بسيطة. المراجعة المستقلة جمعت 43 اختباراً بلا فشل مع تجاوز اختبار بطيء واحد. هذا مو بناء أو تشغيل للعبة ولا جاهزية أصلية؛ ماكو محول إدخال عادي وقناة رصد حقيقيين، وG1 مو مسلح وما نجح.",
       "milestone_basis": "REVIEWED_CHECKPOINT",
       "blocker": "يلزم محول إدخال ورصد حقيقيان وربط المصدر ببناء وحزمة جديدين وإذن تشغيل صالح؛ مو دعوة لعب",
@@ -54,9 +54,9 @@
       "branch": null,
       "completion_scope": "NOT_COMPLETE",
       "worker_observation": {
-        "observed_state": "ACTIVE_DELEGATE_OBSERVED",
-        "observed_at": "2026-10-20T22:29:07.289434+00:00",
-        "expires_at": "2026-10-20T22:34:07.289434+00:00",
+        "observed_state": "NO_ACTIVE_DELEGATE_OBSERVED",
+        "observed_at": "2026-10-20T22:54:25.098666+00:00",
+        "expires_at": "2026-10-20T22:59:25.098666+00:00",
         "stale_after_seconds": 300,
         "basis": "HERMES_NATIVE_DELEGATE_LIST"
       }
@@ -103,7 +103,7 @@
       "id": "fantasy-roam-world",
       "title": "FantasyRoam",
       "title_ar": "تصحيح ملف مصدر واحد؛ التحقق الأصلي بعده محجوب",
-      "status": "ACTIVE",
+      "status": "BLOCKED",
       "milestone": "الخريطة القديمة مرفوضة من مهند؛ فحص الأصول المحدود السابق محفوظ. طُبق تصحيح ملف CPP واحد وانفحص تطابق التغيير؛ الفحص المسجل للنموذج الثابت نجح في 21 من 21 بعد فشل 9 سابقاً. النتيجة مصدر فقط؛ ما صار بناء أو تشغيل أصلي ولا قبول للشكل. بوابة Analytics بعدَها غير محسومة، وتهيئة عالم المحرر الحقيقي قبل Main تحتاج مراجعة سلامة وسيطرة.",
       "milestone_basis": "REVIEWED_CHECKPOINT",
       "blocker": "حسم Analytics وسلامة التهيئة قبل Main ثم إذن بناء وتشغيل صالح؛ لا قبول بصري من فحص المصدر",
@@ -111,9 +111,9 @@
       "branch": null,
       "completion_scope": "NOT_COMPLETE",
       "worker_observation": {
-        "observed_state": "ACTIVE_DELEGATE_OBSERVED",
-        "observed_at": "2026-10-20T22:29:07.289434+00:00",
-        "expires_at": "2026-10-20T22:34:07.289434+00:00",
+        "observed_state": "NO_ACTIVE_DELEGATE_OBSERVED",
+        "observed_at": "2026-10-20T22:50:23.308719+00:00",
+        "expires_at": "2026-10-20T22:55:23.308719+00:00",
         "stale_after_seconds": 300,
         "basis": "HERMES_NATIVE_DELEGATE_LIST"
       }
@@ -160,7 +160,7 @@
       "id": "hermesgametest-original",
       "title": "HermesGameTest · original",
       "title_ar": "أدلة PSO محفوظة؛ المشكلة الأصلية بعدَها مفتوحة",
-      "status": "ACTIVE",
+      "status": "BLOCKED",
       "milestone": "اكتمل فحص الأدلة المحفوظة بدون تشغيل: 112 فحص اتساق و16 اختباراً مسجلاً ناجحة؛ الاختبارات مو إعادة تشغيل جديدة. المشكلة 21 الخاصة بـ PSO بعدَها غير محسومة؛ ماكو إثبات للسبب الدقيق أو إصلاح، وما صار تعديل مصدر أو بناء أو تشغيل أصلي ضمن هذا الفحص.",
       "milestone_basis": "REVIEWED_CHECKPOINT",
       "blocker": "أدلة الاستدعاء الفاشل الكاملة غير متوفرة؛ أي فحص أصلي أو التقاط جديد يحتاج نطاقاً مأذوناً",
@@ -168,9 +168,9 @@
       "branch": null,
       "completion_scope": "NOT_COMPLETE",
       "worker_observation": {
-        "observed_state": "ACTIVE_DELEGATE_OBSERVED",
-        "observed_at": "2026-10-20T22:29:07.289434+00:00",
-        "expires_at": "2026-10-20T22:34:07.289434+00:00",
+        "observed_state": "NO_ACTIVE_DELEGATE_OBSERVED",
+        "observed_at": "2026-10-20T23:13:59.807048+00:00",
+        "expires_at": "2026-10-20T23:18:59.807048+00:00",
         "stale_after_seconds": 300,
         "basis": "HERMES_NATIVE_DELEGATE_LIST"
       }
