@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "last_checked": "2026-10-21T00:18:06Z",
+  "last_checked": "2026-10-21T00:22:36Z",
   "provenance": "N8N_MATERIALIZED_REGISTRY_CHECKPOINT",
   "integration": "N8N_DURABLE_GITHUB",
-  "checkpoint": 868,
-  "source_revision": "6dfc211c6e49d8f86bec5edb2b7e88fc7ba1f1fb6cdff2fb3b355538f4ade559",
+  "checkpoint": 885,
+  "source_revision": "837b66a86811dd8a31e98756107ba217d9865281b9602ca6108657ff5237165c",
   "observation_semantics": "LAST_KNOWN_REGISTRY_NOT_LIVE_WORKER_PROOF",
   "source_time_basis": "REGISTRY_FILE_MTIME_NOT_LANE_EVENT_TIME",
   "runtime_stale_after_seconds": 900,
@@ -46,7 +46,7 @@
       "id": "drop-1-1-fast-playtest",
       "title": "Drop1.1 · separate correction",
       "title_ar": "متحكم تشغيل جانبي متحقق بمعزل؛ مو جاهزية لعب",
-      "status": "ACTIVE",
+      "status": "BLOCKED",
       "milestone": "Drop1 الأساسي مقبول بعد Build11؛ التحسين مستقل وهدف Area Foundation باقي. العامل أكمل 43 اختباراً معزولاً، منها مهلة فعلية آمنة 120 ثانية لعملية Python بسيطة. المراجعة المستقلة جمعت 43 اختباراً بلا فشل مع تجاوز اختبار بطيء واحد. هذا مو بناء أو تشغيل للعبة ولا جاهزية أصلية؛ ماكو محول إدخال عادي وقناة رصد حقيقيين، وG1 مو مسلح وما نجح.",
       "milestone_basis": "REVIEWED_CHECKPOINT",
       "blocker": "يلزم محول إدخال ورصد حقيقيان وربط المصدر ببناء وحزمة جديدين وإذن تشغيل صالح؛ مو دعوة لعب",
@@ -54,9 +54,9 @@
       "branch": null,
       "completion_scope": "NOT_COMPLETE",
       "worker_observation": {
-        "observed_state": "ACTIVE_DELEGATE_OBSERVED",
-        "observed_at": "2026-10-21T00:17:56.875463+00:00",
-        "expires_at": "2026-10-21T00:22:56.875463+00:00",
+        "observed_state": "NO_ACTIVE_DELEGATE_OBSERVED",
+        "observed_at": "2026-10-21T00:22:30.242769+00:00",
+        "expires_at": "2026-10-21T00:27:30.242769+00:00",
         "stale_after_seconds": 300,
         "basis": "HERMES_NATIVE_DELEGATE_LIST"
       }
